@@ -1,0 +1,189 @@
+2024-10-20 14:09:27.242 +04:00 [INF] Application is shutting down...
+2024-10-20 15:05:43.538 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-20 15:05:43.571 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-20 15:05:43.571 +04:00 [INF] Hosting environment: Development
+2024-10-20 15:05:43.571 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-20 15:05:45.292 +04:00 [INF] Application is shutting down...
+2024-10-20 15:07:30.109 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-20 15:07:30.141 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-20 15:07:30.141 +04:00 [INF] Hosting environment: Development
+2024-10-20 15:07:30.141 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-20 15:07:32.512 +04:00 [INF] Application is shutting down...
+2024-10-20 16:08:00.258 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-20 16:08:00.293 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-20 16:08:00.293 +04:00 [INF] Hosting environment: Development
+2024-10-20 16:08:00.293 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-20 16:08:07.497 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-20 16:08:08.293 +04:00 [INF] HTTP GET /api/Countries responded 200 in 788.6130 ms
+2024-10-20 16:08:31.504 +04:00 [INF] HTTP GET /api/Countries responded 200 in 51.5292 ms
+2024-10-20 16:08:40.008 +04:00 [INF] HTTP GET /api/Countries/2 responded 200 in 169.3478 ms
+2024-10-20 16:08:48.160 +04:00 [INF] HTTP GET /api/Countries/7 responded 200 in 36.3793 ms
+2024-10-20 16:09:35.782 +04:00 [INF] HTTP PUT /api/Countries/3 responded 404 in 81.7378 ms
+2024-10-20 16:10:12.348 +04:00 [INF] HTTP PUT /api/Countries/3 responded 404 in 25.5434 ms
+2024-10-20 16:10:22.666 +04:00 [INF] HTTP DELETE /api/Countries/7 responded 404 in 15.7102 ms
+2024-10-20 16:10:28.553 +04:00 [INF] HTTP GET /api/Countries responded 200 in 24.5838 ms
+2024-10-20 16:10:30.233 +04:00 [INF] HTTP GET /api/Countries responded 200 in 16.8465 ms
+2024-10-20 16:13:04.811 +04:00 [INF] HTTP POST /api/Countries responded 201 in 163.0228 ms
+2024-10-20 16:13:10.256 +04:00 [INF] HTTP GET /api/Countries responded 200 in 19.4748 ms
+2024-10-20 16:13:14.819 +04:00 [INF] HTTP PUT /api/Countries/3 responded 404 in 28.1493 ms
+2024-10-20 16:13:16.042 +04:00 [INF] HTTP PUT /api/Countries/3 responded 404 in 25.1755 ms
+2024-10-20 16:13:53.627 +04:00 [INF] HTTP PUT /api/Countries/8 responded 400 in 21.4623 ms
+2024-10-20 16:14:50.772 +04:00 [INF] Application is shutting down...
+2024-10-20 16:14:51.759 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-20 16:14:51.796 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-20 16:14:51.797 +04:00 [INF] Hosting environment: Development
+2024-10-20 16:14:51.797 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-20 16:15:07.082 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-20 16:15:07.298 +04:00 [INF] HTTP PUT /api/Countries/3 responded 400 in 211.9506 ms
+2024-10-20 16:15:28.115 +04:00 [INF] Application is shutting down...
+2024-10-20 16:15:38.052 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-20 16:15:38.086 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-20 16:15:38.087 +04:00 [INF] Hosting environment: Development
+2024-10-20 16:15:38.087 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-20 16:15:57.401 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-20 16:16:19.492 +04:00 [INF] HTTP PUT /api/Countries/2 responded 400 in 22082.9389 ms
+2024-10-20 16:16:40.451 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-20 16:16:40.485 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-20 16:16:40.485 +04:00 [INF] Hosting environment: Development
+2024-10-20 16:16:40.485 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-20 16:16:43.650 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-20 16:17:41.619 +04:00 [INF] HTTP PUT /api/Countries/3 responded 404 in 57963.1604 ms
+2024-10-20 16:17:49.100 +04:00 [INF] HTTP PUT /api/Countries/3 responded 404 in 2364.2636 ms
+2024-10-20 16:18:02.206 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-20 16:18:02.245 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-20 16:18:02.245 +04:00 [INF] Hosting environment: Development
+2024-10-20 16:18:02.245 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-20 16:18:24.474 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-20 16:18:54.822 +04:00 [INF] HTTP PUT /api/Countries/3 responded 404 in 30328.8843 ms
+2024-10-20 16:19:14.242 +04:00 [INF] HTTP GET /api/Countries/3 responded 200 in 217.3287 ms
+2024-10-20 16:19:16.284 +04:00 [INF] HTTP GET /api/Countries/3 responded 200 in 418.4324 ms
+2024-10-20 16:20:13.208 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-20 16:20:13.245 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-20 16:20:13.245 +04:00 [INF] Hosting environment: Development
+2024-10-20 16:20:13.245 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-20 16:20:19.096 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-20 16:20:26.840 +04:00 [ERR] HTTP PUT /api/Countries/3 responded 500 in 7735.8017 ms
+System.InvalidOperationException: The instance of entity type 'CountryModel' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Update[TEntity](TEntity entity)
+   at LearningASPweb.Data.Repositories.AspTestDbRepositoryBase`2.UpdateAsync(TEntity entity) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Data/Repositories/AspTestDbRepositoryBase.cs:line 34
+   at LearningASPweb.Controllers.Countries.PutCountry(Int32 id, PutCountryDto countryDto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/Countries.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-10-20 16:20:26.865 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The instance of entity type 'CountryModel' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Update[TEntity](TEntity entity)
+   at LearningASPweb.Data.Repositories.AspTestDbRepositoryBase`2.UpdateAsync(TEntity entity) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Data/Repositories/AspTestDbRepositoryBase.cs:line 34
+   at LearningASPweb.Controllers.Countries.PutCountry(Int32 id, PutCountryDto countryDto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/Countries.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-20 16:21:10.624 +04:00 [ERR] HTTP PUT /api/Countries/3 responded 500 in 19223.9256 ms
+System.InvalidOperationException: The instance of entity type 'CountryModel' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Update[TEntity](TEntity entity)
+   at LearningASPweb.Data.Repositories.AspTestDbRepositoryBase`2.UpdateAsync(TEntity entity) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Data/Repositories/AspTestDbRepositoryBase.cs:line 34
+   at LearningASPweb.Controllers.Countries.PutCountry(Int32 id, PutCountryDto countryDto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/Countries.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-10-20 16:21:10.628 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The instance of entity type 'CountryModel' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Update[TEntity](TEntity entity)
+   at LearningASPweb.Data.Repositories.AspTestDbRepositoryBase`2.UpdateAsync(TEntity entity) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Data/Repositories/AspTestDbRepositoryBase.cs:line 34
+   at LearningASPweb.Controllers.Countries.PutCountry(Int32 id, PutCountryDto countryDto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/Countries.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-20 16:25:23.453 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-20 16:25:23.487 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-20 16:25:23.487 +04:00 [INF] Hosting environment: Development
+2024-10-20 16:25:23.487 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-20 16:25:29.396 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-20 16:25:35.419 +04:00 [INF] HTTP PUT /api/Countries/3 responded 204 in 6014.1186 ms
+2024-10-20 16:25:46.648 +04:00 [INF] HTTP GET /api/Countries/3 responded 200 in 257.1194 ms

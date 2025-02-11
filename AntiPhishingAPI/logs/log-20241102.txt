@@ -1,0 +1,8 @@
+2024-11-02 15:01:06.828 +04:00 [INF] Now listening on: http://localhost:5234
+2024-11-02 15:01:06.860 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-02 15:01:06.860 +04:00 [INF] Hosting environment: Development
+2024-11-02 15:01:06.860 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TestWebAPI/LearningASPweb/LearningASPweb
+2024-11-02 15:01:53.771 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-11-02 15:01:55.020 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1222.2756 ms
+2024-11-02 15:03:20.589 +04:00 [INF] HTTP GET /api/v2/countries/2 responded 200 in 106.9109 ms
+2024-11-02 18:29:47.173 +04:00 [INF] Application is shutting down...

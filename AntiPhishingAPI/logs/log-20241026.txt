@@ -1,0 +1,102 @@
+2024-10-26 18:34:53.409 +04:00 [WRN] No XML encryptor configured. Key {5c0bef73-9b1f-4c3f-be90-6e5ce09e3e02} may be persisted to storage in unencrypted form.
+2024-10-26 18:34:53.460 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-26 18:34:53.461 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-26 18:34:53.462 +04:00 [INF] Hosting environment: Development
+2024-10-26 18:34:53.462 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-26 18:35:01.766 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-26 18:35:02.676 +04:00 [ERR] HTTP POST /api/Auth/login responded 500 in 903.5060 ms
+System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at LearningASPweb.GlobalManagers.AuthManager.GenerateJwtTokenAsync(APIUserModel user) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/GlobalManagers/AuthManager.cs:line 54
+   at LearningASPweb.GlobalManagers.AuthManager.LoginUser(APILoginDto dto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/GlobalManagers/AuthManager.cs:line 44
+   at LearningASPweb.Controllers.AuthController.Login(APILoginDto userDto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/AuthController.cs:line 47
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-10-26 18:35:02.685 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at LearningASPweb.GlobalManagers.AuthManager.GenerateJwtTokenAsync(APIUserModel user) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/GlobalManagers/AuthManager.cs:line 54
+   at LearningASPweb.GlobalManagers.AuthManager.LoginUser(APILoginDto dto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/GlobalManagers/AuthManager.cs:line 44
+   at LearningASPweb.Controllers.AuthController.Login(APILoginDto userDto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/AuthController.cs:line 47
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-26 18:35:13.720 +04:00 [INF] Application is shutting down...
+2024-10-26 18:35:16.474 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-26 18:35:16.563 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-26 18:35:16.564 +04:00 [INF] Hosting environment: Development
+2024-10-26 18:35:16.565 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-26 18:35:17.735 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-26 18:35:38.412 +04:00 [ERR] HTTP POST /api/Auth/login responded 500 in 20673.0622 ms
+System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at LearningASPweb.GlobalManagers.AuthManager.GenerateJwtTokenAsync(APIUserModel user) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/GlobalManagers/AuthManager.cs:line 54
+   at LearningASPweb.GlobalManagers.AuthManager.LoginUser(APILoginDto dto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/GlobalManagers/AuthManager.cs:line 44
+   at LearningASPweb.Controllers.AuthController.Login(APILoginDto userDto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/AuthController.cs:line 47
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-10-26 18:35:38.421 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at LearningASPweb.GlobalManagers.AuthManager.GenerateJwtTokenAsync(APIUserModel user) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/GlobalManagers/AuthManager.cs:line 54
+   at LearningASPweb.GlobalManagers.AuthManager.LoginUser(APILoginDto dto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/GlobalManagers/AuthManager.cs:line 44
+   at LearningASPweb.Controllers.AuthController.Login(APILoginDto userDto) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/AuthController.cs:line 47
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-26 18:38:35.146 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-26 18:38:35.227 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-26 18:38:35.227 +04:00 [INF] Hosting environment: Development
+2024-10-26 18:38:35.227 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-26 18:38:42.185 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-26 18:39:53.845 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-26 18:39:53.877 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-26 18:39:53.877 +04:00 [INF] Hosting environment: Development
+2024-10-26 18:39:53.877 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-26 18:41:24.595 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-26 18:41:25.577 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 975.9218 ms
+2024-10-26 18:48:21.912 +04:00 [INF] Application is shutting down...

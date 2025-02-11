@@ -1,0 +1,194 @@
+2025-02-10 19:05:12.251 +04:00 [WRN] No XML encryptor configured. Key {b8844d30-3708-40e2-9070-7add1ddf7a81} may be persisted to storage in unencrypted form.
+2025-02-10 19:05:12.299 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 19:05:12.300 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 19:05:12.300 +04:00 [INF] Hosting environment: Development
+2025-02-10 19:05:12.300 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 19:05:40.465 +04:00 [INF] Application is shutting down...
+2025-02-10 19:14:59.243 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 19:14:59.274 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 19:14:59.275 +04:00 [INF] Hosting environment: Development
+2025-02-10 19:14:59.275 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 19:20:09.824 +04:00 [INF] Application is shutting down...
+2025-02-10 19:20:10.900 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 19:20:10.931 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 19:20:10.931 +04:00 [INF] Hosting environment: Development
+2025-02-10 19:20:10.931 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 19:29:52.404 +04:00 [INF] Application is shutting down...
+2025-02-10 19:29:55.002 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 19:29:55.032 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 19:29:55.032 +04:00 [INF] Hosting environment: Development
+2025-02-10 19:29:55.032 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 19:30:44.586 +04:00 [INF] Application is shutting down...
+2025-02-10 19:44:43.953 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 19:49:13.250 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 19:53:26.916 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 19:54:31.878 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 19:54:31.910 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 19:54:31.910 +04:00 [INF] Hosting environment: Development
+2025-02-10 19:54:31.910 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 19:54:35.719 +04:00 [INF] Application is shutting down...
+2025-02-10 19:54:45.136 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 19:55:43.037 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 19:55:43.066 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 19:55:43.066 +04:00 [INF] Hosting environment: Development
+2025-02-10 19:55:43.066 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 19:55:46.118 +04:00 [INF] Application is shutting down...
+2025-02-10 19:59:38.843 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 20:01:37.464 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 20:01:37.494 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 20:01:37.494 +04:00 [INF] Hosting environment: Development
+2025-02-10 20:01:37.494 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 20:18:58.142 +04:00 [INF] Application is shutting down...
+ [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 20:09:12.982 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 20:22:41.934 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 20:23:33.569 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 20:23:54.793 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 20:25:11.055 +04:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE `AspNetRoles` (
+    `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `NormalizedName` varchar(256) CHARACTER SET utf8mb4 NULL,
+    `ConcurrencyStamp` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_AspNetRoles` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2025-02-10 20:26:41.608 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 20:26:41.639 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 20:26:41.639 +04:00 [INF] Hosting environment: Development
+2025-02-10 20:26:41.640 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 20:27:39.563 +04:00 [WRN] Failed to determine the https port for redirect.
+2025-02-10 20:27:40.684 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 1083.2999 ms
+2025-02-10 20:28:06.169 +04:00 [ERR] HTTP POST /api/Auth/login responded 500 in 174.3952 ms
+System.NotSupportedException: No IUserTwoFactorTokenProvider<TUser> named 'HotelListingApi' is registered.
+   at Microsoft.AspNetCore.Identity.UserManager`1.GenerateUserTokenAsync(TUser user, String tokenProvider, String purpose)
+   at LearningASPweb.GlobalManagers.AuthManager.GenerateRefreshToken(TumoLubProjectUserModel user) in /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity/GlobalManagers/AuthManager.cs:line 57
+   at LearningASPweb.GlobalManagers.AuthManager.LoginUser(TumoLubProjectLoginDto dto) in /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity/GlobalManagers/AuthManager.cs:line 46
+   at LearningASPweb.Controllers.AuthController.Login(TumoLubProjectLoginDto userDto) in /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity/Controllers/AuthController.cs:line 47
+   at lambda_method295(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-02-10 20:28:06.178 +04:00 [ERR] Something is wrong
+System.NotSupportedException: No IUserTwoFactorTokenProvider<TUser> named 'HotelListingApi' is registered.
+   at Microsoft.AspNetCore.Identity.UserManager`1.GenerateUserTokenAsync(TUser user, String tokenProvider, String purpose)
+   at LearningASPweb.GlobalManagers.AuthManager.GenerateRefreshToken(TumoLubProjectUserModel user) in /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity/GlobalManagers/AuthManager.cs:line 57
+   at LearningASPweb.GlobalManagers.AuthManager.LoginUser(TumoLubProjectLoginDto dto) in /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity/GlobalManagers/AuthManager.cs:line 46
+   at LearningASPweb.Controllers.AuthController.Login(TumoLubProjectLoginDto userDto) in /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity/Controllers/AuthController.cs:line 47
+   at lambda_method295(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at LearningASPweb.Middlewares.ExeptionMiddleware.InvokeAsync(HttpContext context) in /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity/Middlewares/ExeptionMiddleware.cs:line 23
+2025-02-10 20:29:22.589 +04:00 [INF] Application is shutting down...
+2025-02-10 20:29:26.050 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 20:29:26.081 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 20:29:26.081 +04:00 [INF] Hosting environment: Development
+2025-02-10 20:29:26.081 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 20:29:38.369 +04:00 [WRN] Failed to determine the https port for redirect.
+2025-02-10 20:29:38.613 +04:00 [INF] HTTP POST /api/Auth/login responded 400 in 209.5390 ms
+2025-02-10 20:30:24.605 +04:00 [INF] Application is shutting down...
+2025-02-10 20:30:31.253 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 20:30:31.284 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 20:30:31.284 +04:00 [INF] Hosting environment: Development
+2025-02-10 20:30:31.284 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 20:30:42.570 +04:00 [WRN] Failed to determine the https port for redirect.
+2025-02-10 20:30:42.927 +04:00 [INF] HTTP POST /api/Auth/login responded 400 in 294.4222 ms
+2025-02-10 20:31:14.605 +04:00 [INF] Now listening on: http://localhost:5234
+2025-02-10 20:31:14.639 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-10 20:31:14.639 +04:00 [INF] Hosting environment: Development
+2025-02-10 20:31:14.639 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TumoLubCybersecurity/TumoLubCybersecurity
+2025-02-10 20:31:23.196 +04:00 [WRN] Failed to determine the https port for redirect.
+2025-02-10 20:31:23.541 +04:00 [INF] HTTP POST /api/Auth/login responded 400 in 293.4521 ms
+2025-02-10 20:33:16.761 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 33072.5058 ms
+2025-02-10 20:33:52.599 +04:00 [INF] HTTP POST /api/Auth/login responded 400 in 33.7645 ms
+2025-02-10 20:33:54.692 +04:00 [INF] HTTP POST /api/Auth/login responded 400 in 22.2517 ms
+2025-02-10 20:33:55.375 +04:00 [INF] HTTP POST /api/Auth/login responded 400 in 13.9823 ms
+2025-02-10 20:34:03.689 +04:00 [INF] HTTP POST /api/Auth/login responded 400 in 19.9854 ms
+2025-02-10 20:34:04.313 +04:00 [INF] HTTP POST /api/Auth/login responded 400 in 19.4477 ms
+2025-02-10 20:34:17.546 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 6196.4535 ms

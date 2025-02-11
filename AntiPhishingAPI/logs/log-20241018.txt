@@ -1,0 +1,59 @@
+2024-10-18 12:29:07.811 +04:00 [INF] HTTP DELETE /api/Countries/1 responded 204 in 76.0130 ms
+2024-10-18 12:29:14.630 +04:00 [INF] HTTP GET /api/Countries responded 200 in 29.7693 ms
+2024-10-18 12:31:54.248 +04:00 [INF] HTTP GET /api/Countries responded 200 in 24.8974 ms
+2024-10-18 12:31:55.523 +04:00 [INF] HTTP GET /api/Countries responded 200 in 22.1950 ms
+2024-10-18 12:31:56.734 +04:00 [INF] HTTP GET /api/Countries responded 200 in 26.3476 ms
+2024-10-18 12:32:30.392 +04:00 [INF] Application is shutting down...
+2024-10-18 14:57:04.384 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-18 14:57:04.450 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 14:57:04.451 +04:00 [INF] Hosting environment: Development
+2024-10-18 14:57:04.451 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-18 14:59:02.467 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-18 14:59:03.226 +04:00 [INF] HTTP GET /api/Countries responded 200 in 749.5541 ms
+2024-10-18 14:59:04.646 +04:00 [INF] HTTP GET /api/Countries responded 200 in 54.8937 ms
+2024-10-18 14:59:50.929 +04:00 [INF] Application is shutting down...
+2024-10-18 15:02:58.912 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-18 15:02:58.943 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 15:02:58.943 +04:00 [INF] Hosting environment: Development
+2024-10-18 15:02:58.943 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-18 15:03:07.154 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-18 15:03:07.934 +04:00 [INF] HTTP GET /api/Countries responded 200 in 772.6108 ms
+2024-10-18 15:03:14.429 +04:00 [INF] HTTP GET /api/Countries responded 200 in 28.3882 ms
+2024-10-18 15:03:38.180 +04:00 [INF] Application is shutting down...
+2024-10-18 15:03:39.780 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-18 15:03:39.811 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 15:03:39.811 +04:00 [INF] Hosting environment: Development
+2024-10-18 15:03:39.811 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-18 15:03:43.840 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-18 15:03:44.610 +04:00 [INF] HTTP GET /api/Countries responded 200 in 762.9356 ms
+2024-10-18 15:03:57.162 +04:00 [INF] Application is shutting down...
+2024-10-18 15:03:58.660 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-18 15:03:58.692 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 15:03:58.692 +04:00 [INF] Hosting environment: Development
+2024-10-18 15:03:58.692 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-18 15:04:04.842 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-18 15:04:05.636 +04:00 [INF] HTTP GET /api/Countries responded 200 in 786.4745 ms
+2024-10-18 15:14:32.254 +04:00 [INF] Application is shutting down...
+2024-10-18 15:31:49.853 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-18 15:31:49.885 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 15:31:49.885 +04:00 [INF] Hosting environment: Development
+2024-10-18 15:31:49.885 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-18 15:32:05.249 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-18 15:32:06.159 +04:00 [INF] HTTP GET /api/Countries/2 responded 200 in 902.8198 ms
+2024-10-18 15:32:09.178 +04:00 [INF] HTTP GET /api/Countries/1 responded 404 in 47.4866 ms
+2024-10-18 15:32:13.408 +04:00 [INF] HTTP GET /api/Countries/3 responded 200 in 41.9374 ms
+2024-10-18 15:32:15.811 +04:00 [INF] HTTP GET /api/Countries/4 responded 200 in 25.4365 ms
+2024-10-18 15:32:17.418 +04:00 [INF] HTTP GET /api/Countries/2 responded 200 in 22.7155 ms
+2024-10-18 17:01:12.936 +04:00 [INF] Application is shutting down...
+2024-10-18 18:34:26.034 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-18 18:34:26.066 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 18:34:26.066 +04:00 [INF] Hosting environment: Development
+2024-10-18 18:34:26.066 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-18 18:35:30.524 +04:00 [INF] Application is shutting down...
+2024-10-18 18:35:32.266 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-18 18:35:32.297 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 18:35:32.298 +04:00 [INF] Hosting environment: Development
+2024-10-18 18:35:32.298 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-18 18:35:44.173 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-18 18:35:45.071 +04:00 [INF] HTTP PUT /api/Countries/3 responded 204 in 891.6528 ms
+2024-10-18 18:35:52.724 +04:00 [INF] HTTP GET /api/Countries/3 responded 200 in 84.4212 ms

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "CwmJooJeF+MTvXZhlPwb+Ov0Mkf/EjPRRIJjwf0Xxcg=",
+  "Source": "AntiPhishingAPI",
+  "BasePath": "_content/AntiPhishingAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

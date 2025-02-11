@@ -1,0 +1,27 @@
+2024-11-01 16:29:17.402 +04:00 [INF] Now listening on: http://localhost:5234
+2024-11-01 16:29:17.435 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-01 16:29:17.436 +04:00 [INF] Hosting environment: Development
+2024-11-01 16:29:17.436 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TestWebAPI/LearningASPweb/LearningASPweb
+2024-11-01 16:38:44.628 +04:00 [INF] Application is shutting down...
+2024-11-01 16:38:48.374 +04:00 [INF] Now listening on: http://localhost:5234
+2024-11-01 16:38:48.412 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-01 16:38:48.412 +04:00 [INF] Hosting environment: Development
+2024-11-01 16:38:48.412 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TestWebAPI/LearningASPweb/LearningASPweb
+2024-11-01 16:39:45.350 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-11-01 16:39:45.413 +04:00 [INF] HTTP GET /api/Countries responded 404 in 0.4802 ms
+2024-11-01 16:40:10.429 +04:00 [INF] HTTP GET /api/v1/Countries responded 200 in 1289.6303 ms
+2024-11-01 16:40:56.874 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-01 16:40:56.875 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-01 16:40:56.930 +04:00 [INF] HTTP GET /api/v2/Countries/GetPage responded 200 in 481.8873 ms
+2024-11-01 16:41:38.353 +04:00 [INF] HTTP GET /api/vv2/countries responded 404 in 0.0442 ms
+2024-11-01 16:44:38.826 +04:00 [INF] Now listening on: http://localhost:5234
+2024-11-01 16:44:38.858 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-01 16:44:38.858 +04:00 [INF] Hosting environment: Development
+2024-11-01 16:44:38.858 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/DotNet/TestWebAPI/LearningASPweb/LearningASPweb
+2024-11-01 16:44:41.738 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-11-01 16:44:42.602 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-01 16:44:42.602 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-01 16:44:42.659 +04:00 [INF] HTTP GET /api/v2/Countries/GetPage responded 200 in 897.3831 ms
+2024-11-01 16:51:17.808 +04:00 [INF] HTTP GET /api/v2/Countries/GetPage responded 200 in 77.6738 ms
+2024-11-01 16:51:25.168 +04:00 [INF] HTTP GET /api/v2/Countries/GetPage responded 200 in 32.8237 ms
+2024-11-01 16:51:40.209 +04:00 [INF] Application is shutting down...

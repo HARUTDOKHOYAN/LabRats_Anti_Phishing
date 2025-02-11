@@ -1,0 +1,48 @@
+2024-10-23 11:48:44.970 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-23 11:48:45.002 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-23 11:48:45.002 +04:00 [INF] Hosting environment: Development
+2024-10-23 11:48:45.002 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-23 11:48:49.416 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-23 11:48:50.268 +04:00 [INF] HTTP GET /api/Countries responded 200 in 846.2449 ms
+2024-10-23 11:49:37.332 +04:00 [INF] Application is shutting down...
+2024-10-23 12:23:13.028 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-23 12:23:13.060 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-23 12:23:13.060 +04:00 [INF] Hosting environment: Development
+2024-10-23 12:23:13.060 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-23 13:10:36.550 +04:00 [INF] Application is shutting down...
+2024-10-23 13:10:39.727 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-23 13:10:39.785 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-23 13:10:39.794 +04:00 [INF] Hosting environment: Development
+2024-10-23 13:10:39.794 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-23 13:11:07.077 +04:00 [INF] Application is shutting down...
+2024-10-23 13:11:08.862 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-23 13:11:08.892 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-23 13:11:08.892 +04:00 [INF] Hosting environment: Development
+2024-10-23 13:11:08.892 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-23 13:17:15.025 +04:00 [INF] Application is shutting down...
+2024-10-23 13:17:17.233 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-23 13:17:17.267 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-23 13:17:17.267 +04:00 [INF] Hosting environment: Development
+2024-10-23 13:17:17.267 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-23 13:18:30.883 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-23 13:18:31.150 +04:00 [INF] HTTP GET /api/Auth/register responded 400 in 259.6448 ms
+2024-10-23 13:18:55.711 +04:00 [INF] HTTP GET /api/Auth/register responded 400 in 34.9010 ms
+2024-10-23 13:19:07.516 +04:00 [INF] HTTP GET /api/Auth/register responded 200 in 895.2292 ms
+2024-10-23 13:19:12.825 +04:00 [INF] HTTP GET /api/Auth/register responded 400 in 28.8870 ms
+2024-10-23 13:21:51.061 +04:00 [INF] Application is shutting down...
+2024-10-23 13:21:52.941 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-23 13:21:52.972 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-23 13:21:52.973 +04:00 [INF] Hosting environment: Development
+2024-10-23 13:21:52.973 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-23 13:23:19.030 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-23 13:23:19.845 +04:00 [INF] HTTP GET /api/Countries responded 200 in 807.8329 ms
+2024-10-23 13:23:31.225 +04:00 [INF] HTTP POST /api/Countries responded 201 in 196.8736 ms
+2024-10-23 13:27:12.854 +04:00 [INF] HTTP POST /api/Auth/register responded 405 in 0.6601 ms
+2024-10-23 13:27:20.728 +04:00 [INF] Application is shutting down...
+2024-10-23 13:27:23.441 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-23 13:27:23.471 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-23 13:27:23.472 +04:00 [INF] Hosting environment: Development
+2024-10-23 13:27:23.472 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-23 13:28:04.141 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-23 13:28:05.391 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 1240.6850 ms
+2024-10-23 13:28:12.877 +04:00 [INF] HTTP POST /api/Auth/register responded 400 in 39.9663 ms

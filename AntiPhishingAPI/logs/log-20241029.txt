@@ -1,0 +1,91 @@
+2024-10-29 18:28:15.056 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-29 18:28:15.088 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-29 18:28:15.088 +04:00 [INF] Hosting environment: Development
+2024-10-29 18:28:15.088 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-29 18:28:29.011 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-29 18:28:45.449 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1213.3090 ms
+2024-10-29 18:29:12.654 +04:00 [INF] HTTP GET /api/Countries/2 responded 200 in 97.6073 ms
+2024-10-29 18:29:19.962 +04:00 [INF] Application is shutting down...
+2024-10-29 18:29:23.290 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-29 18:29:23.323 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-29 18:29:23.324 +04:00 [INF] Hosting environment: Development
+2024-10-29 18:29:23.324 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-29 18:29:25.920 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-29 18:29:33.400 +04:00 [INF] HTTP GET /api/Countries/2 responded 200 in 1271.5328 ms
+2024-10-29 18:29:47.730 +04:00 [INF] HTTP GET /api/Countries/899 responded 404 in 498.4924 ms
+2024-10-29 18:30:08.494 +04:00 [INF] HTTP GET /api/Countries/8 responded 200 in 337.6215 ms
+2024-10-29 18:30:18.816 +04:00 [INF] HTTP GET /api/Countries/80 responded 404 in 347.7340 ms
+2024-10-29 18:30:47.208 +04:00 [INF] HTTP GET /api/Countries/80 responded 404 in 456.4655 ms
+2024-10-29 18:32:22.215 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-29 18:32:22.251 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-29 18:32:22.251 +04:00 [INF] Hosting environment: Development
+2024-10-29 18:32:22.251 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-29 18:32:25.923 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-29 18:32:27.255 +04:00 [ERR] HTTP GET /api/Countries/80 responded 500 in 1237.4161 ms
+LearningASPweb.Exceptions.UserNotFoundException: NAME` Country not found KEY` 
+   at LearningASPweb.Controllers.Countries.GetCountry(Int32 id) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/Countries.cs:line 40
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-10-29 18:32:38.525 +04:00 [ERR] Something is wrong
+LearningASPweb.Exceptions.UserNotFoundException: NAME` Country not found KEY` 
+   at LearningASPweb.Controllers.Countries.GetCountry(Int32 id) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/Countries.cs:line 40
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at LearningASPweb.Middlewares.ExeptionMiddleware.InvokeAsync(HttpContext context) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Middlewares/ExeptionMiddleware.cs:line 23
+2024-10-29 18:38:25.588 +04:00 [INF] Now listening on: http://localhost:5234
+2024-10-29 18:38:25.621 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-29 18:38:25.621 +04:00 [INF] Hosting environment: Development
+2024-10-29 18:38:25.621 +04:00 [INF] Content root path: /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb
+2024-10-29 18:38:28.492 +04:00 [WRN] Failed to determine the https port for redirect.
+2024-10-29 18:38:29.762 +04:00 [ERR] HTTP GET /api/Countries/80 responded 500 in 1221.9516 ms
+LearningASPweb.Exceptions.UserNotFoundException: NAME` Country Not Found KEY` GetCountry
+   at LearningASPweb.Controllers.Countries.GetCountry(Int32 id) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/Countries.cs:line 40
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-10-29 18:38:29.773 +04:00 [ERR] Something is wrong
+LearningASPweb.Exceptions.UserNotFoundException: NAME` Country Not Found KEY` GetCountry
+   at LearningASPweb.Controllers.Countries.GetCountry(Int32 id) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Controllers/Countries.cs:line 40
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at LearningASPweb.Middlewares.ExeptionMiddleware.InvokeAsync(HttpContext context) in /Users/harutdokhoyan/Desktop/C#/TestWebAPI/LearningASPweb/LearningASPweb/Middlewares/ExeptionMiddleware.cs:line 23
+2024-10-29 18:38:35.029 +04:00 [INF] Application is shutting down...
