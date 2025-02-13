@@ -1,0 +1,3 @@
+[submodule "external/Phishing.Database"]
+	path = external/Phishing.Database
+	url = https://github.com/Davit1996Sargsyan/Phishing.Database.git
