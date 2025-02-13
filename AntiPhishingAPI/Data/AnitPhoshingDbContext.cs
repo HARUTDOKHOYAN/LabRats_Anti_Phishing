@@ -8,7 +8,7 @@ public class AnitPhoshingDbContext:IdentityDbContext<APIUserModel>
 {
     public AnitPhoshingDbContext(DbContextOptions options) : base(options)
     {
-        
+       Database.EnsureCreatedAsync();   
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
