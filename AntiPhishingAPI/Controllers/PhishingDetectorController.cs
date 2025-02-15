@@ -1,4 +1,6 @@
-﻿using LearningASPweb.Data;
+using AntiPhishingAPI.Data.DTO;
+using AntiPhishingAPI.SerVices.ServiceInterfaces;
+using LearningASPweb.Data;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,37 +11,22 @@ namespace AntiPhishingAPI.Controllers
     [ApiController]
     public class PhishingDetectorController : ControllerBase
     {
+        private readonly IPhishingChecker _blackListChecker;
+        public PhishingDetectorController(IPhishingChecker checker)
+        {
+           _blackListChecker = checker;
+        }
         // GET: api/<PhishingDetectorController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task <CheckingLink> Get()
         {
-            return new string[] { "value1", "value2" };
+                return null;
         }
-
-        // GET api/<PhishingDetectorController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<PhishingDetectorController>
         [HttpPost]
         public void Post([FromBody] TextModel value)
         {
             
-        }
-
-        // PUT api/<PhishingDetectorController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<PhishingDetectorController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
