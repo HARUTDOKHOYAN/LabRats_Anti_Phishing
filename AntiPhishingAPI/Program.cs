@@ -17,6 +17,17 @@ internal class Program
         });
         builder.Host.UseSerilog((ctx,lc) => lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowChromeExtension",
+                policy =>
+                {
+                    policy.WithOrigins("https://www.wikidata.org") // Allow specific origin
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+        });
+        
         ServiceLocatorConfig.ConfigureAppServices(builder);
         
         
@@ -29,7 +40,7 @@ internal class Program
         }
 
         app.UseHttpsRedirection();
-
+        app.UseCors("AllowChromeExtension");
         app.UseMiddleware<ExeptionMiddleware>();
         app.UseAuthentication();
         app.UseAuthorization();

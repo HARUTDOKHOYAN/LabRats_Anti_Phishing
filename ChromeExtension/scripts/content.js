@@ -18,12 +18,16 @@ function URLScanPostRequest(url)
     const myHeaders = new Headers();
     myHeaders.append("accept", "*/*");
     myHeaders.append("Content-Type", "application/json; ver=1.0");
+    myHeaders.append("Access-Control-Allow-Origin", "*");
+    myHeaders.append("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
 
-    const raw = "{\n    \"Text\" : " + url + "\n}";
+    const raw = "{\n    \"Text\" : \"data\"\n}";
+
     const requestOptions = {
         method: "POST",
+        mode: "cors",
         headers: myHeaders,
-        body: url,
+        body: raw,
         redirect: "follow"
     };
 
@@ -31,6 +35,7 @@ function URLScanPostRequest(url)
         .then((response) => response.text())
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
+
 }
 
 function GetURLResultAfterScanGetRequest(id)

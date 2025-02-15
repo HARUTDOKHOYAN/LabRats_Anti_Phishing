@@ -24,9 +24,11 @@ namespace AntiPhishingAPI.Controllers
         }
         // POST api/<PhishingDetectorController>
         [HttpPost]
-        public void Post([FromBody] TextModel value)
+        public ActionResult Post([FromBody] TextModel value)
         {
-            
+            // Response.Headers.Append("Access-Control-Allow-Origin", "http://localhost:5234/api/PhishingDetector");
+            // Response.Headers.Append("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+            return Ok(new { message = "CORS enabled for this endpoint" });
         }
     }
 }
