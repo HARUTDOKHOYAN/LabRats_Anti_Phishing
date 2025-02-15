@@ -22,7 +22,7 @@ internal class Program
             options.AddPolicy("AllowChromeExtension",
                 policy =>
                 {
-                    policy.WithOrigins("https://www.wikidata.org") // Allow specific origin
+                    policy.AllowAnyOrigin()
                         .AllowAnyMethod()
                         .AllowAnyHeader();
                 });
