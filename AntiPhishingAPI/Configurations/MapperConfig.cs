@@ -1,3 +1,4 @@
+using AntiPhishingAPI.Data.DTO;
 using AutoMapper;
 using LearningASPweb.Data;
 using LearningASPweb.Data.DTOs;
@@ -9,5 +10,8 @@ public class MapperConfig: Profile
     public MapperConfig()
     {
         CreateMap<APIUserModel, ApiUserDto>().ReverseMap();
+        CreateMap<string, CheckingLink>()
+            .ForMember(dest => dest.Link, opt => opt.MapFrom(src => src))
+            .ForMember(dest => dest.Dangerousity, opt => opt.Ignore());
     }
 }
