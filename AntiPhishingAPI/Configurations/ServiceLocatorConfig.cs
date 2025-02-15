@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using AntiPhishingAPI.SerVices.ServiceInterfaces;
+using AntiPhishingAPI.SerVices.ServiceClasses;
 
 namespace LearningASPweb.Configurations;
 
@@ -27,6 +29,9 @@ public static class ServiceLocatorConfig
             .AddEntityFrameworkStores<AnitPhoshingDbContext>()
             .AddDefaultTokenProviders();
         services.AddScoped<IAuthManager, AuthManager>();
+        services.AddScoped<IPhishingChecker, PhishingChecker>();
+        services.AddHttpClient();
+        services.AddScoped<IVirusTotalService,VirusTotalServie>();
         services.AddApiVersioning(option =>
         {
             option.AssumeDefaultVersionWhenUnspecified = true;
