@@ -3,6 +3,9 @@
     "description": "Anti Phishing",
     "version": "1.0",
     "manifest_version": 3,
+    "host_permissions": [
+        "http://localhost:5234/*"
+    ],
     "content_scripts": [
         {
             "js": [

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LearningASPweb.Data;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,8 +25,9 @@ namespace AntiPhishingAPI.Controllers
 
         // POST api/<PhishingDetectorController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] TextModel value)
         {
+            
         }
 
         // PUT api/<PhishingDetectorController>/5
