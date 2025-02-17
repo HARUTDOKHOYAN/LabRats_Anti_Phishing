@@ -1,22 +1,25 @@
-function createPopupContent(score) {
+function createPopupContent(level, score) {
+    let colors = getColors(level);
+
     let popup = el('div', 'labrats-popup');
 
-    a(popup, getTopDiv(score));
-    a(popup, getBottomDiv());
+    a(popup, getTopDiv(level, colors, score));
+    a(popup, getBottomDiv(level, colors));
     return popup;
 }
 
-function getTopDiv(score) {
+function getTopDiv(level, colors, score) {
     let topDiv = el('div', 'top-div');
-    a(topDiv, getProgressRing(score));
+    a(topDiv, getProgressRing(colors, score));
 
     let rightDiv = el('div', 'right-div');
     a(topDiv, rightDiv);
 
     let title = el('h2', 'lab-rats-h2');
-    a(title, document.createTextNode("High Risk Detected"));
+    title.style.color = colors.main;
+    a(title, document.createTextNode(level == 'danger' ? 'High Risk Detected' : 'Potential Risk'));
     let descr = el('p', 'lab-rats-p');
-    a(descr, document.createTextNode("This link is dangerous and may contain security threats."));
+    a(descr, document.createTextNode(level == 'danger' ? 'This link is dangerous and may contain security threats' : 'This link may be unsafe, proceed with caution'));
 
     a(rightDiv, title);
     a(rightDiv, descr);
@@ -24,21 +27,27 @@ function getTopDiv(score) {
     return topDiv;
 }
 
-function getBottomDiv() {
+function getBottomDiv(level, colors) {
     let bottomDiv = el('div', 'bottom-div');
-    let text = el('p');
-    a(text, document.createTextNode("For your safety, access is blocked."));
 
-    a(bottomDiv, text);
+    if (level == 'danger') {
+        let text = el('p');
+        text.style.color = colors.main;
+        a(text, document.createTextNode('For your safety, access is blocked.'));
+
+        a(bottomDiv, text);
+    } else {
+        
+    }
 
     return bottomDiv;
 }
 
-function getProgressRing(score) {
+function getProgressRing(colors, score) {
     let circle = el('div', 'progress-circle');
 
-    drawProgressCircle(circle, 100, '#E5737340', 100, 10, false);
-    drawProgressCircle(circle, score, '#E57373', 100, 10, true);
+    drawProgressCircle(circle, 100, colors.secondary, 100, 10, false);
+    drawProgressCircle(circle, score, colors.main, 100, 10, true);
     return circle;
 }
 

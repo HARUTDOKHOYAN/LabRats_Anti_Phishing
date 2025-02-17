@@ -6,7 +6,7 @@ const updateLinks = () => {
             if (popupInfo.timeout)
                 clearTimeout(popupInfo.timeout);
             
-            let score = 34;
+            let score = Math.round(Math.random() * 100);
 
             let wrapper = document.getElementsByClassName('lab-rats-popup-wrapper')[0];
             wrapper.replaceChildren();
@@ -20,7 +20,7 @@ const updateLinks = () => {
             wrapper.style.left = `${x}px`;
             wrapper.style.top = `${y}px`;
 
-            a(wrapper, createPopupContent(score));
+            a(wrapper, createPopupContent(score > 50 ? 'danger' : 'warning', score));
         });
 
         element.addEventListener("mouseleave", () => {
