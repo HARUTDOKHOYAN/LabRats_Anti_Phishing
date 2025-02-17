@@ -1,8 +1,6 @@
 ﻿using AntiPhishingAPI.Data.DTO;
 using AntiPhishingAPI.SerVices.ServiceInterfaces;
-using Microsoft.AspNetCore.DataProtection;
 using Newtonsoft.Json;
-using NuGet.Common;
 using System.Text;
 
 namespace AntiPhishingAPI.SerVices.ServiceClasses

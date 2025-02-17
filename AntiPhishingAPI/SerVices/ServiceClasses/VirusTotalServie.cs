@@ -1,7 +1,6 @@
 ﻿using AntiPhishingAPI.Configurations.Utils;
 using AntiPhishingAPI.Data.DTO;
 using AntiPhishingAPI.SerVices.ServiceInterfaces;
-using System.Security.Policy;
 using System.Text.Json;
 
 namespace AntiPhishingAPI.SerVices.ServiceClasses

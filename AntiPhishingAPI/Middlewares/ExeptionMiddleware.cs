@@ -31,6 +31,7 @@ public class ExeptionMiddleware
 
     private  Task HandleExeptionAsync(HttpContext context, Exception ex)
     {
+
         context.Response.ContentType = "application/json";
         var statusCode = HttpStatusCode.InternalServerError;
         var message = new ASPWebErrorModel

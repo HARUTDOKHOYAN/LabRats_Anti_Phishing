@@ -22,6 +22,7 @@ namespace AntiPhishingAPI.Controllers
         public async Task<CheckingLink> Get()
         {
             CheckingLink link = new CheckingLink() { Link = "https://www.google.com/" };
+            await _blackListChecker.CheckLinkPresenceInPhishingDbAsync("https://www.google.com/");
             link = await _virusTotalService.CheckLinkInVirusTotalAsync(link);
             return link;
         }
