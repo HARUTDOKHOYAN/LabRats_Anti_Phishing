@@ -4,6 +4,6 @@ namespace AntiPhishingAPI.SerVices.ServiceInterfaces
 {
     public interface IPhishingChecker
     {
-        public Task<CheckingLink> CheckLinkPresenceInPhishingDBAsync(string phishingLink);
+        public Task<CheckingLink> CheckLinkPresenceInPhishingDbAsync(string phishingLink);
     }
 }

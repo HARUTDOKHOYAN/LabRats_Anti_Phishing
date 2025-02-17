@@ -15,12 +15,12 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
             _configuration = configuration;
         }
 
-        public async Task<CheckingLink> CheckLinkPresenceInPhishingDBAsync(string phishingLink)
+        public async Task<CheckingLink> CheckLinkPresenceInPhishingDbAsync(string phishingLink)
         {
-            string BlackListPath = _configuration["BlacklIstsFiles:PhisngLinksPath"];
-            HashSet<string> Blacklist = (HashSet<string>)await Converter.FileToSetConverter(BlackListPath);
+            string blackListPath = _configuration["BlacklIstsFiles:PhisngLinksPath"];
+            HashSet<string> blacklist = (HashSet<string>)await Converter.FileToSetConverter(blackListPath);
             CheckingLink link=_mapper.Map<CheckingLink>(phishingLink);
-            if (Blacklist.Contains(link.Link)) 
+            if (blacklist.Contains(link.Link)) 
             {
                 link.Dangerousity += 1;
             }
