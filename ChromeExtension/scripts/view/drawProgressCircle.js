@@ -10,6 +10,7 @@ var drawProgressCircle = function (el, percent, color, size, lineWidth, withLabe
 
     if (withLabel) {
         var span = document.createElement('span');
+        span.style.color = color;
         span.textContent = percent;
         el.appendChild(span);
     }

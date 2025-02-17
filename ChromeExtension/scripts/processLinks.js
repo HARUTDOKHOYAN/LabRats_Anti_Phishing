@@ -1,5 +1,3 @@
-let timeout;
-
 function processLinks(links) {
     links.forEach((link, i) => processLink(link, i));
 }
@@ -10,8 +8,11 @@ function processLink(a, score) {
 }
 
 function onMouseEnter(a, score) {
-    if (timeout)
-        clearTimeout(timeout);
+    if (popupInfo.timeout)
+        clearTimeout(popupInfo.timeout);
+
+    //scan link
+    score = 34;
 
     let wrapper = document.getElementsByClassName('lab-rats-popup-wrapper')[0];
     wrapper.replaceChildren();
@@ -25,14 +26,11 @@ function onMouseEnter(a, score) {
     wrapper.style.top = `${y}px`;
 
     createPopup(wrapper, score);
-    //scan link
-    //add popup element to the link
-    //on element load add circle start
 }
 
 function onMouseLeave(e) {
     let wrapper = document.getElementsByClassName('lab-rats-popup-wrapper')[0];
-    timeout = setTimeout(() => {
+    popupInfo.timeout = setTimeout(() => {
         wrapper.style.visibility = 'hidden';
-    }, 200);
+    }, popupInfo.closeTimeMs);
 }
