@@ -1,3 +1,4 @@
+using AntiPhishingAPI.Data.Models;
 using LearningASPweb.Configurations.DataConfig;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ namespace LearningASPweb.Data;
 
 public class AnitPhoshingDbContext:IdentityDbContext<APIUserModel>
 {
+    public DbSet<CheckedLink> Links { get; set; } = null!;
     public AnitPhoshingDbContext(DbContextOptions options) : base(options)
     {
        Database.EnsureCreatedAsync();   

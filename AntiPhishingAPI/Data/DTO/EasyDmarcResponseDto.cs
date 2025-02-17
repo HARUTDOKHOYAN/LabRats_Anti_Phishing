@@ -1,7 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace AntiPhishingAPI.Data.DTO
 {
+    [Owned]
     public class EasyDmarcResponseDto
     {
         [JsonProperty("original_url")]

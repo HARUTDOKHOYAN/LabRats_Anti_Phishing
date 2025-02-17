@@ -1,8 +1,9 @@
-﻿using System.Text.Json.Serialization;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 namespace AntiPhishingAPI.Data.DTO
 {
-
+    [Owned]
     public class VirusTotalResultDTO
     {
         [JsonPropertyName("malicious")]

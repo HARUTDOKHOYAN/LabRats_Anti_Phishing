@@ -10,6 +10,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using AntiPhishingAPI.SerVices.ServiceInterfaces;
 using AntiPhishingAPI.SerVices.ServiceClasses;
+using AntiPhishingAPI.Data.Repositories.Contracts;
+using AntiPhishingAPI.Data.Repositories;
 
 namespace LearningASPweb.Configurations;
 
@@ -30,8 +32,11 @@ public static class ServiceLocatorConfig
             .AddDefaultTokenProviders();
         services.AddScoped<IAuthManager, AuthManager>();
         services.AddScoped<IPhishingChecker, PhishingChecker>();
+        services.AddScoped<ICheckStatus, CheckStatusService>();
         services.AddHttpClient();
+        services.AddScoped<ICheckedLinkRepository, CheckedLinksRepository>();
         services.AddScoped<IVirusTotalService,VirusTotalServie>();
+        services.AddScoped<ILinksService, LinkService>();
         services.AddApiVersioning(option =>
         {
             option.AssumeDefaultVersionWhenUnspecified = true;
