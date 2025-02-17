@@ -1,0 +1,50 @@
+.labrats-popup h2, 
+.labrats-popup p{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+.lab-rats-popup-wrapper {
+    z-index: 99999;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: white;
+    box-shadow: 0 0 16px #00000020;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.labrats-popup .top-div {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    height: 100px;
+}
+
+.labrats-popup .top-div .right-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.labrats-popup .top-div .right-div .lab-rats-h2{
+    font-size: 24px;
+    color: #E57373;
+}
+
+.labrats-popup .top-div .right-div .lab-rats-p{
+    font-size: 16px;
+    margin-top: 8px;
+    color: #848484;
+}
+
+.labrats-popup .bottom-div {
+    color: #E57373;
+}
