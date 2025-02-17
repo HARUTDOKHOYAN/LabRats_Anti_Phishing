@@ -30,6 +30,7 @@ public static class ServiceLocatorConfig
             .AddDefaultTokenProviders();
         services.AddScoped<IAuthManager, AuthManager>();
         services.AddScoped<IPhishingChecker, PhishingChecker>();
+        services.AddScoped<ICheckStatus, CheckStatusService>();
         services.AddHttpClient();
         services.AddScoped<IVirusTotalService,VirusTotalServie>();
         services.AddApiVersioning(option =>
