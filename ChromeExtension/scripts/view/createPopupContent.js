@@ -1,9 +1,9 @@
-function createPopup(parent, score) {
+function createPopupContent(score) {
     let popup = el('div', 'labrats-popup');
-    a(parent, popup);
 
     a(popup, getTopDiv(score));
     a(popup, getBottomDiv());
+    return popup;
 }
 
 function getTopDiv(score) {

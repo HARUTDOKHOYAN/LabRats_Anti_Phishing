@@ -1,4 +1,4 @@
-var drawProgressCircle = function (el, percent, color, size, lineWidth, withLabel) {
+function drawProgressCircle(el, percent, color, size, lineWidth, withLabel) {
 
     var canvas = document.createElement('canvas');
 

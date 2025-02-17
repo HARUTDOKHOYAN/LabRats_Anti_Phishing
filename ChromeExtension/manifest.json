@@ -11,9 +11,10 @@
             ],
             "js": [
                 "scripts/globalVars.js",
+                "scripts/urlScraping.js",
+                "scripts/view/setupPopup.js",
+                "scripts/view/createPopupContent.js",
                 "scripts/view/drawProgressCircle.js",
-                "scripts/view/createPopup.js",
-                "scripts/processLinks.js",
                 "scripts/content.js"
             ],
             "matches": [

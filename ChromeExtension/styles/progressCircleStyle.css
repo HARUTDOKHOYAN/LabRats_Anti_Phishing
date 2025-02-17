@@ -1,25 +1,24 @@
 .labrats-popup .progress-circle {
-    position: relative;
     width: 100px;
     height: 100px;
-    display: flex;
+    display: grid;
     justify-content: center;
+    align-items: center;
+    justify-items: center;
     align-items: center;
 }
 
 .labrats-popup .progress-circle canvas {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .labrats-popup .progress-circle span {
     color: #555;
-    position: absolute;
-    display: block;
+    grid-column: 1;
+    grid-row: 1;
     text-align: center;
-    width: 100%;
     font-family: sans-serif;
+    width: 40px;
     font-size: 24px;
 }
