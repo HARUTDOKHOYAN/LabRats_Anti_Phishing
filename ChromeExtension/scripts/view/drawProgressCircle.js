@@ -1,9 +1,6 @@
 var drawProgressCircle = function (el, percent, color, size, lineWidth, withLabel) {
 
     var canvas = document.createElement('canvas');
-    if (typeof (G_vmlCanvasManager) !== 'undefined') {
-        G_vmlCanvasManager.initElement(canvas);
-    }
 
     var ctx = canvas.getContext('2d');
     canvas.width = canvas.height = size;
