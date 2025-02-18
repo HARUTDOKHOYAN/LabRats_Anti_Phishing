@@ -1,4 +1,5 @@
 ﻿using AntiPhishingAPI.Data.DTO;
+using AntiPhishingAPI.Data.Models;
 using AntiPhishingAPI.SerVices.ServiceInterfaces;
 using Newtonsoft.Json;
 using System.Text;
@@ -47,7 +48,7 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
             }
         }
 
-        public async Task<CheckingLink> CheckLinkByEasyDmarcAsync(CheckingLink link)
+        public async Task<CheckingLink> CheckLinkByEasyDmarcAsync(CheckingLink link, DbData dbInstance)
         {
             try
             {
@@ -70,6 +71,11 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
                     if (linkData.Result)
                     {
                         link.Dangerousity += 0.25;
+                        if(dbInstance != null)
+                        {
+                            dbInstance.EasyDmarcResponse= linkData;
+                            dbInstance.Dangerousity=link.Dangerousity;
+                        }
                     }
                 }
                 else

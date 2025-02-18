@@ -13,15 +13,15 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
         {
             _repository = repository;
         }
-        public async Task<int> AddLinkDataInDb(CheckedLink link)
+        public async Task<int> AddLinkDataInDb(DbData link)
         {
             int id = await _repository.CreateAsync(link);
             return id;
         }
 
-        public async Task<CheckedLink> GetCheckingLinkById(int id)
+        public async Task<DbData> GetCheckingLinkById(int id)
         {
-            CheckedLink result= await _repository.ReadAsync(id);
+            DbData result= await _repository.ReadAsync(id);
             return result;
         }
     }

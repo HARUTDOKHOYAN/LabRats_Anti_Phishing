@@ -5,7 +5,7 @@ namespace AntiPhishingAPI.SerVices.ServiceInterfaces
 {
     public interface ILinksService
     {
-        Task<int> AddLinkDataInDb(CheckedLink link);
-        Task<CheckedLink>GetCheckingLinkById(int id);
+        Task<int> AddLinkDataInDb(DbData link);
+        Task<DbData>GetCheckingLinkById(int id);
     }
 }

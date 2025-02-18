@@ -7,7 +7,7 @@ namespace LearningASPweb.Data;
 
 public class AnitPhoshingDbContext:IdentityDbContext<APIUserModel>
 {
-    public DbSet<CheckedLink> Links { get; set; } = null!;
+    public DbSet<DbData> Links { get; set; } = null!;
     public AnitPhoshingDbContext(DbContextOptions options) : base(options)
     {
        Database.EnsureCreatedAsync();   

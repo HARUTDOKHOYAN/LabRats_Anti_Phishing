@@ -3,9 +3,9 @@ using LearningASPweb.Data.Repositories;
 
 namespace AntiPhishingAPI.Data.Repositories.Contracts
 {
-    public interface ICheckedLinkRepository: IRepository<CheckedLink, int>
+    public interface ICheckedLinkRepository: IRepository<DbData, int>
     {
-        public Task<int> CreateAsync(CheckedLink link);
+        public Task<int> CreateAsync(DbData link);
         
     }
 }
