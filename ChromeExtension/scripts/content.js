@@ -9,7 +9,7 @@ async function onLinkHovered(link) {
     iii++;
 
     if (iii % 2 == 1)
-        return { score: 0, dangerType: 'danger' };
+        return { score: 80, dangerType: 'danger' };
     else
         return { score: 40, dangerType: 'warning' };
 }

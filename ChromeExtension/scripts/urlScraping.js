@@ -1,5 +1,5 @@
 const updateLinks = (onLinkHovered) => {
-    document.querySelectorAll("a").forEach(element => {
+    document.querySelectorAll("a").filter(isUrlExternal).forEach(element => {
         blockLink(element);
 
         element.addEventListener("focus", e => onEnter(e, onLinkHovered));
