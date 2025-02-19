@@ -1,39 +1,60 @@
-const updateLinks = () => {
-    document.querySelectorAll("a, [data-href]").forEach(element => {
-        element.addEventListener("mouseenter", (event) => {
-            const href = element.href || element.getAttribute("data-href");
+const updateLinks = (onLinkHovered) => {
+    document.querySelectorAll("a").forEach(element => {
+        blockLink(element);
 
-            if (popupInfo.timeout)
-                clearTimeout(popupInfo.timeout);
-            
-            let score = Math.round(Math.random() * 100);
+        element.addEventListener("focus", e => onEnter(e, onLinkHovered));
+        element.addEventListener("mouseenter", e => onEnter(e, onLinkHovered));
 
-            let wrapper = document.getElementsByClassName('lab-rats-popup-wrapper')[0];
-            wrapper.replaceChildren();
-
-            wrapper.style.display = 'block';
-
-            const rect = element.getBoundingClientRect();
-            let x = rect.left + window.scrollX;
-            x = x + 400 > window.innerWidth ? x - (400 - (window.innerWidth - x)) : x;
-            const y = rect.top + window.scrollY + 40;
-            wrapper.style.left = `${x}px`;
-            wrapper.style.top = `${y}px`;
-
-            a(wrapper, createPopupContent(score > 50 ? 'danger' : 'warning', score));
-        });
-
-        element.addEventListener("mouseleave", () => {
-            let wrapper = document.getElementsByClassName('lab-rats-popup-wrapper')[0];
-            popupInfo.timeout = setTimeout(() => {
-                wrapper.style.display = 'none';
-            }, popupInfo.closeTimeMs);
-        });
+        element.addEventListener("focusout", onLeave);
+        element.addEventListener("mouseleave", onLeave);
     });
 };
 
-function getLinkDOMElements() {
-    return [...document.getElementsByTagName('a')].filter(a => isUrlExternal(a.href));
+function onEnter(e, onLinkHovered) {
+    const element = e.target;
+    const { score, dangerType } = onLinkHovered(element.href);
+
+    if (score == 0) {
+        unblockLink(element);
+        return;
+    }
+
+    if (popupInfo.timeout)
+        clearTimeout(popupInfo.timeout);
+
+    const wrapper = getPopupWrapper();
+    wrapper.replaceChildren();
+
+    wrapper.style.display = 'block';
+
+    const rect = element.getBoundingClientRect();
+    let x = rect.left + window.scrollX;
+    x = x + 400 > window.innerWidth ? x - (400 - (window.innerWidth - x)) : x;
+    const y = rect.top + window.scrollY + 40;
+    wrapper.style.left = `${x}px`;
+    wrapper.style.top = `${y}px`;
+
+    a(wrapper, createPopupContent(dangerType, score));
+}
+
+function onLeave() {
+    const wrapper = getPopupWrapper();
+    popupInfo.timeout = setTimeout(() => {
+        wrapper.style.display = 'none';
+    }, popupInfo.closeTimeMs);
+}
+
+function blockLink(element) {
+    element.setAttribute("href-back", element.href);
+    element.href = "javascript:void(0)";
+}
+
+function unblockLink(element) {
+    element.href = element.getAttribute("href-back");
+}
+
+function getPopupWrapper() {
+    return document.getElementsByClassName('lab-rats-popup-wrapper')[0];
 }
 
 function isUrlExternal(url) {

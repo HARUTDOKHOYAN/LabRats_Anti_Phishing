@@ -1,5 +1,14 @@
 setupPopup();
 
-// const observer = new MutationObserver(updateLinks);
-// observer.observe(document.body, { childList: true, subtree: true });
-updateLinks();
+updateLinks(onLinkHovered);
+
+let iii = 0;
+
+function onLinkHovered(link) {
+    iii++;
+
+    if (iii % 2 == 1)
+        return { score: 0, dangerType: 'danger' };
+    else
+        return { score: 40, dangerType: 'warning' };
+}
