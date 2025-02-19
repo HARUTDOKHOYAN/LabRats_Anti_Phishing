@@ -28,6 +28,8 @@ async function onEnter(e, onLinkHovered) {
         return;
     }
 
+    element.style['border-bottom'] = `solid 2px ${getColors(model.dangerType).main}`;
+
     if (popupInfo.timeout)
         clearTimeout(popupInfo.timeout);
 
