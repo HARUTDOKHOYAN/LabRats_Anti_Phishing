@@ -1,5 +1,5 @@
 const updateLinks = (onLinkHovered) => {
-    [...document.querySelectorAll("a")].filter(isUrlExternal).forEach(element => {
+    [...document.querySelectorAll("a")].filter(isExternalUrl).forEach(element => {
         blockLink(element);
 
         element.addEventListener("focus", e => onEnter(e, onLinkHovered));
@@ -65,20 +65,10 @@ function getPopupWrapper() {
     return document.getElementsByClassName('lab-rats-popup-wrapper')[0];
 }
 
-function isUrlExternal(element) {
-    let url = element.href;
-    const domainName = window.location.hostname.split('.')[1];
-
-    if (url.includes("://")) {
-        url = url.substring(url.indexOf("://") + 3);
-    }
-
-    const slashIndex = url.search(/[\/?#]/);
-    if (slashIndex !== -1) {
-        url = url.substring(0, slashIndex);
-    }
-    return !url.includes(domainName);
-}
+const isExternalUrl = (a) =>
+    a.href.startsWith('http')&&
+    URL.canParse(a.href) &&
+    new URL(a.href).origin !== location.origin;
 
 function changeCursor(element, cursor) {
     element.style.cursor = cursor;
