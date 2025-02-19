@@ -1,0 +1,85 @@
+const updateLinks = (onLinkHovered) => {
+    [...document.querySelectorAll("a")].filter(isUrlExternal).forEach(element => {
+        blockLink(element);
+
+        element.addEventListener("focus", e => onEnter(e, onLinkHovered));
+        element.addEventListener("mouseenter", e => onEnter(e, onLinkHovered));
+
+        element.addEventListener("focusout", onLeave);
+        element.addEventListener("mouseleave", onLeave);
+    });
+};
+
+async function onEnter(e, onLinkHovered) {
+    const element = e.target;
+
+    changeCursor(element, 'wait');
+
+    let model = { score: 0, dangerType: 'none' };
+    try {
+        model = { ...model, ...await onLinkHovered(element.href) };
+    } finally {
+        changeCursor(element, '');
+    }
+
+    if (model.score == 0) {
+        unblockLink(element);
+        return;
+    }
+
+    if (popupInfo.timeout)
+        clearTimeout(popupInfo.timeout);
+
+    const wrapper = getPopupWrapper();
+    wrapper.replaceChildren();
+
+    wrapper.style.display = 'block';
+
+    const rect = element.getBoundingClientRect();
+    let x = rect.left + window.scrollX;
+    x = x + 400 > window.innerWidth ? x - (400 - (window.innerWidth - x)) : x;
+    const y = rect.top + window.scrollY + 40;
+    wrapper.style.left = `${x}px`;
+    wrapper.style.top = `${y}px`;
+
+    a(wrapper, createPopupContent(model.dangerType, model.score));
+}
+
+function onLeave() {
+    const wrapper = getPopupWrapper();
+    popupInfo.timeout = setTimeout(() => {
+        wrapper.style.display = 'none';
+    }, popupInfo.closeTimeMs);
+}
+
+function blockLink(element) {
+    element.setAttribute("href-back", element.href);
+    element.href = "javascript:void(0)";
+}
+
+function unblockLink(element) {
+    element.href = element.getAttribute("href-back");
+}
+
+function getPopupWrapper() {
+    return document.getElementsByClassName('lab-rats-popup-wrapper')[0];
+}
+
+function isUrlExternal(element) {
+    let url = element.href;
+    const domainName = window.location.hostname.split('.')[1];
+
+    if (url.includes("://")) {
+        url = url.substring(url.indexOf("://") + 3);
+    }
+
+    const slashIndex = url.search(/[\/?#]/);
+    if (slashIndex !== -1) {
+        url = url.substring(0, slashIndex);
+    }
+    return !url.includes(domainName);
+}
+
+function changeCursor(element, cursor) {
+    element.style.cursor = cursor;
+}
