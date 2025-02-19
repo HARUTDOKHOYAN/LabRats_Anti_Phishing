@@ -1,8 +1,10 @@
 ﻿using System.Net;
 using AntiPhishingAPI.Data.DTO;
 using AntiPhishingAPI.Data.Models;
+using AntiPhishingAPI.SerVices.ServiceClasses;
 using AntiPhishingAPI.SerVices.ServiceInterfaces;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AntiPhishingAPI.Controllers
@@ -16,30 +18,25 @@ namespace AntiPhishingAPI.Controllers
         private readonly IVirusTotalService _virusTotalService;
         private readonly ILinksService _linksService;
         private readonly IMapper _mapper;
-        public PhishingDetectorController(ICheckStatus checkStatus , IPhishingChecker checker, IVirusTotalService virusTotalService,ILinksService linksService)
+        private readonly IEasyDmarc _dmarc;
+        public PhishingDetectorController(ICheckStatus checkStatus , IPhishingChecker checker, IVirusTotalService virusTotalService,ILinksService linksService, IEasyDmarc dmarc)
         {
             _checkStatus = checkStatus;
             _blackListChecker = checker;
             _virusTotalService = virusTotalService;
             _linksService = linksService;
+            _dmarc = dmarc;
         }
-        // GET: api/<PhishingDetectorController>
-        [HttpGet]
-        public async Task<CheckingLink> Get()
+        //[Authorize]
+        [HttpGet("Get/{id}")]
+        public async Task<DbData> Get(int id)
         {
-            var link = new CheckingLink{Link = "https://www.Kokalo.su/"};
-            var status = await _checkStatus.GetStatus(link.Link);
-            if (status != HttpStatusCode.OK)
-            {
-                link.Dangerousity = -1;
-                return link;
-            }
-            await _blackListChecker.CheckLinkPresenceInPhishingDbAsync(link.Link);
-            link = await _virusTotalService.CheckLinkInVirusTotalAsync(link);
-            return link;
+            DbData dbData=await _linksService.GetCheckingLinkById(id);
+            return dbData;
         }
+        //[Authorize]
         [HttpPost]
-        public async Task<int>CheckLink(string link)
+        public async Task<int>CheckLink([FromBody]string link)
         {
             if (String.IsNullOrEmpty(link))
             {
@@ -47,14 +44,22 @@ namespace AntiPhishingAPI.Controllers
                 throw new Exception("incorrect data");
             }
             CheckingLink CheckLink=_mapper.Map<CheckingLink>(link);
+            DbData dbInstance = new DbData() { Url = link };
             var status = await _checkStatus.GetStatus(CheckLink.Link);
+            //what if the 300 redirection comes??????
             if (status != HttpStatusCode.OK)
             {
-                CheckLink.Dangerousity = -1;
-                return 0;
+                dbInstance.IsLinkActive=false;
+                dbInstance.Dangerousity = 1;
+                await _linksService.AddLinkDataInDb(dbInstance);
+                //the Front side prompts that the link does not exist in case of negative value
+                return int.MinValue;
             }
-            CheckedLink dbInstance= new CheckedLink() { Url = link };
-            C
+            CheckLink=await _blackListChecker.CheckLinkPresenceInPhishingDbAsync(CheckLink,dbInstance);
+            CheckLink = await _virusTotalService.CheckLinkInVirusTotalAsync(CheckLink, dbInstance);
+            CheckLink=await _dmarc.CheckLinkByEasyDmarcAsync(CheckLink,dbInstance);
+            int result = await _linksService.AddLinkDataInDb(dbInstance);
+            return result;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AntiPhishingAPI.Configurations.Utils;
 using AntiPhishingAPI.Data.DTO;
+using AntiPhishingAPI.Data.Models;
 using AntiPhishingAPI.SerVices.ServiceInterfaces;
 using System.Text.Json;
 
@@ -64,7 +65,7 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
             return dto.Harmless-(dto.Suspicious+dto.Malicious+dto.Undetected);
         }
 
-        public async Task<CheckingLink> CheckLinkInVirusTotalAsync(CheckingLink link)
+        public async Task<CheckingLink> CheckLinkInVirusTotalAsync(CheckingLink link, DbData dbInstance)
         {
             string checkingLinkId = await SendLinkToVirusTotalToCheckAsync(link.Link);
             string virusTotalServiceResponse= await CheckLinkByIdFromVirusTotalAsync(checkingLinkId);
@@ -73,6 +74,10 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
             if (await VirusTotalChecksResultAsync(virusTotalResultDTO)<0)
             {
                 link.Dangerousity += 0.25;
+                if (dbInstance != null)
+                {
+                    dbInstance.VirusTotalResult = virusTotalResultDTO;
+                }
             }
             return link;
         }

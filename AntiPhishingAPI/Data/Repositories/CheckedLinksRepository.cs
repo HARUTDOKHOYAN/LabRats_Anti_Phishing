@@ -6,14 +6,14 @@ using LearningASPweb.Data.Repositories;
 
 namespace AntiPhishingAPI.Data.Repositories
 {
-    public class CheckedLinksRepository : AspTestDbRepositoryBase<CheckedLink, int>, ICheckedLinkRepository
+    public class CheckedLinksRepository : AspTestDbRepositoryBase<DbData, int>, ICheckedLinkRepository
     {
         public CheckedLinksRepository(AnitPhoshingDbContext context, IMapper mapper) : base(context, mapper)
         {
         }
 
         //hide the abstract class method not good
-        public async Task<int> CreateAsync(CheckedLink link)
+        public async Task<int> CreateAsync(DbData link)
         {
             await Context.AddAsync(link);
             await Context.SaveChangesAsync();
