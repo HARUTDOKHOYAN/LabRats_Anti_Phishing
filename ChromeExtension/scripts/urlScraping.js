@@ -1,5 +1,5 @@
 const updateLinks = (onLinkHovered) => {
-    document.querySelectorAll("a").filter(isUrlExternal).forEach(element => {
+    [...document.querySelectorAll("a")].filter(isUrlExternal).forEach(element => {
         blockLink(element);
 
         element.addEventListener("focus", e => onEnter(e, onLinkHovered));
@@ -19,8 +19,7 @@ async function onEnter(e, onLinkHovered) {
     try {
         model = { ...model, ...await onLinkHovered(element.href) };
     } finally {
-        changeCursor(element, 'pointer');
-        console.log("end");
+        changeCursor(element, '');
     }
 
     if (model.score == 0) {
@@ -66,14 +65,15 @@ function getPopupWrapper() {
     return document.getElementsByClassName('lab-rats-popup-wrapper')[0];
 }
 
-function isUrlExternal(url) {
-    let domainName = window.location.hostname.split('.')[1];
+function isUrlExternal(element) {
+    let url = element.href;
+    const domainName = window.location.hostname.split('.')[1];
 
     if (url.includes("://")) {
         url = url.substring(url.indexOf("://") + 3);
     }
 
-    let slashIndex = url.search(/[\/?#]/);
+    const slashIndex = url.search(/[\/?#]/);
     if (slashIndex !== -1) {
         url = url.substring(0, slashIndex);
     }
