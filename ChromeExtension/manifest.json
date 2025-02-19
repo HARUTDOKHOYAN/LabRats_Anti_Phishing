@@ -5,7 +5,16 @@
     "manifest_version": 3,
     "content_scripts": [
         {
+            "css": [
+                "styles/popupStyle.css",
+                "styles/progressCircleStyle.css"
+            ],
             "js": [
+                "scripts/globalVars.js",
+                "scripts/urlScraping.js",
+                "scripts/view/setupPopup.js",
+                "scripts/view/createPopupContent.js",
+                "scripts/view/drawProgressCircle.js",
                 "scripts/content.js"
             ],
             "matches": [
