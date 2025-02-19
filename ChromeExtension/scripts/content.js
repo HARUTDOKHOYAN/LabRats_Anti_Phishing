@@ -4,7 +4,8 @@ updateLinks(onLinkHovered);
 
 let iii = 0;
 
-function onLinkHovered(link) {
+async function onLinkHovered(link) {
+    await new Promise(resolve => setTimeout(resolve, 500));
     iii++;
 
     if (iii % 2 == 1)

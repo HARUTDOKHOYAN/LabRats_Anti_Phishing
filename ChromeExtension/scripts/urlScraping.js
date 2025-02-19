@@ -10,11 +10,20 @@ const updateLinks = (onLinkHovered) => {
     });
 };
 
-function onEnter(e, onLinkHovered) {
+async function onEnter(e, onLinkHovered) {
     const element = e.target;
-    const { score, dangerType } = onLinkHovered(element.href);
 
-    if (score == 0) {
+    changeCursor(element, 'wait');
+
+    let model = { score: 0, dangerType: 'none' };
+    try {
+        model = { ...model, ...await onLinkHovered(element.href) };
+    } finally {
+        changeCursor(element, 'pointer');
+        console.log("end");
+    }
+
+    if (model.score == 0) {
         unblockLink(element);
         return;
     }
@@ -34,7 +43,7 @@ function onEnter(e, onLinkHovered) {
     wrapper.style.left = `${x}px`;
     wrapper.style.top = `${y}px`;
 
-    a(wrapper, createPopupContent(dangerType, score));
+    a(wrapper, createPopupContent(model.dangerType, model.score));
 }
 
 function onLeave() {
@@ -69,4 +78,8 @@ function isUrlExternal(url) {
         url = url.substring(0, slashIndex);
     }
     return !url.includes(domainName);
+}
+
+function changeCursor(element, cursor) {
+    element.style.cursor = cursor;
 }
