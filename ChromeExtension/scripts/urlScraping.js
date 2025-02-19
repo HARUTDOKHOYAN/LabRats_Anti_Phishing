@@ -12,12 +12,13 @@ const updateLinks = (onLinkHovered) => {
 
 async function onEnter(e, onLinkHovered) {
     const element = e.target;
+    const link = element.getAttribute('href-back');
 
     changeCursor(element, 'wait');
 
     let model = { score: 0, dangerType: 'none' };
     try {
-        model = { ...model, ...await onLinkHovered(element.href) };
+        model = { ...model, ...await onLinkHovered(link) };
     } finally {
         changeCursor(element, '');
     }
@@ -38,11 +39,11 @@ async function onEnter(e, onLinkHovered) {
     const rect = element.getBoundingClientRect();
     let x = rect.left + window.scrollX;
     x = x + 400 > window.innerWidth ? x - (400 - (window.innerWidth - x)) : x;
-    const y = rect.top + window.scrollY + 40;
+    const y = rect.top + window.scrollY + rect.height;
     wrapper.style.left = `${x}px`;
     wrapper.style.top = `${y}px`;
 
-    a(wrapper, createPopupContent(model.dangerType, model.score));
+    a(wrapper, createPopupContent(model.dangerType, model.score, link));
 }
 
 function onLeave() {

@@ -1,6 +1,6 @@
-setupPopup();
 
 updateLinks(onLinkHovered);
+setupPopup();
 
 let iii = 0;
 
