@@ -1,5 +1,6 @@
 .labrats-popup h2,
-.labrats-popup p {
+.labrats-popup p ,
+.labrats-tooltip {
     margin: 0;
     padding: 0;
     font-family: sans-serif, serif;
@@ -72,4 +73,14 @@
 
 .labrats-popup .top-div .right-div a:visited {
     color: white !important;
+}
+
+.labrats-tooltip {
+    z-index: 99998;
+    position: absolute;
+    background: white;
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: 0 0 16px #00000020;
+    color: black;
 }

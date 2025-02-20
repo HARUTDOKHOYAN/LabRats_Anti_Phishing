@@ -1,6 +1,7 @@
 const popupInfo = {
     timeout: null,
-    closeTimeMs: 400
+    closeTimeMs: 400,
+    isInProcess: false
 }
 
 function getColors(level) {
@@ -10,7 +11,7 @@ function getColors(level) {
             secondary: "#E5737340"
         };
     }
-    else if (level == 'warning'){
+    else if (level == 'warning') {
         return {
             main: "#FFB74D",
             secondary: "#FFB74D40"
