@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace TumoLubCybersecurity.Migrations
+namespace AntiPhishingAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class newDB : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,6 +72,37 @@ namespace TumoLubCybersecurity.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Links",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Url = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Dangerousity = table.Column<double>(type: "double", nullable: false),
+                    IsLinkActive = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    IsLinkInPhishingBlackList = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    VirusTotalResult_Malicious = table.Column<int>(type: "int", nullable: true),
+                    VirusTotalResult_Suspicious = table.Column<int>(type: "int", nullable: true),
+                    VirusTotalResult_Undetected = table.Column<int>(type: "int", nullable: true),
+                    VirusTotalResult_Harmless = table.Column<int>(type: "int", nullable: true),
+                    VirusTotalResult_Timeout = table.Column<int>(type: "int", nullable: true),
+                    EasyDmarcResponse_OriginalUrl = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    EasyDmarcResponse_RedirectedUrl = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    EasyDmarcResponse_PhishingProbability = table.Column<double>(type: "double", nullable: true),
+                    EasyDmarcResponse_Result = table.Column<bool>(type: "tinyint(1)", nullable: true),
+                    EasyDmarcResponse_PredictionUid = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Links", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -207,8 +238,8 @@ namespace TumoLubCybersecurity.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "e03688fe-6e7c-463b-9163-7220fff79419", null, "Admin", "ADMIN" },
-                    { "e6d6cf82-b1dd-4a74-8c6e-4ee4b9493935", null, "User", "USER" }
+                    { "18897414-cfb2-40a8-b3cd-7ea47c202bac", null, "Admin", "ADMIN" },
+                    { "7e2301fc-b697-4a65-8699-84d34ade592d", null, "User", "USER" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -266,6 +297,9 @@ namespace TumoLubCybersecurity.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Links");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

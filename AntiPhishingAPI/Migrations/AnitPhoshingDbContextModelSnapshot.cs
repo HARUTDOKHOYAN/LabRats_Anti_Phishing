@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace TumoLubCybersecurity.Migrations
+namespace AntiPhishingAPI.Migrations
 {
     [DbContext(typeof(AnitPhoshingDbContext))]
-    partial class TumoLubProjectDbContextModelSnapshot : ModelSnapshot
+    partial class AnitPhoshingDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -22,7 +22,32 @@ namespace TumoLubCybersecurity.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("LearningASPweb.Data.TumoLubProjectUserModel", b =>
+            modelBuilder.Entity("AntiPhishingAPI.Data.Models.DbData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("Dangerousity")
+                        .HasColumnType("double");
+
+                    b.Property<bool>("IsLinkActive")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("IsLinkInPhishingBlackList")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Links");
+                });
+
+            modelBuilder.Entity("LearningASPweb.Data.APIUserModel", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
@@ -120,13 +145,13 @@ namespace TumoLubCybersecurity.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "e03688fe-6e7c-463b-9163-7220fff79419",
+                            Id = "18897414-cfb2-40a8-b3cd-7ea47c202bac",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "e6d6cf82-b1dd-4a74-8c6e-4ee4b9493935",
+                            Id = "7e2301fc-b697-4a65-8699-84d34ade592d",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -238,6 +263,74 @@ namespace TumoLubCybersecurity.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("AntiPhishingAPI.Data.Models.DbData", b =>
+                {
+                    b.OwnsOne("AntiPhishingAPI.Data.DTO.EasyDmarcResponseDto", "EasyDmarcResponse", b1 =>
+                        {
+                            b1.Property<int>("DbDataId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("OriginalUrl")
+                                .HasColumnType("longtext");
+
+                            b1.Property<double>("PhishingProbability")
+                                .HasColumnType("double");
+
+                            b1.Property<string>("PredictionUid")
+                                .HasColumnType("longtext");
+
+                            b1.Property<string>("RedirectedUrl")
+                                .HasColumnType("longtext");
+
+                            b1.Property<bool>("Result")
+                                .HasColumnType("tinyint(1)");
+
+                            b1.HasKey("DbDataId");
+
+                            b1.ToTable("Links");
+
+                            b1.WithOwner()
+                                .HasForeignKey("DbDataId");
+                        });
+
+                    b.OwnsOne("AntiPhishingAPI.Data.DTO.VirusTotalResultDTO", "VirusTotalResult", b1 =>
+                        {
+                            b1.Property<int>("DbDataId")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("Harmless")
+                                .HasColumnType("int")
+                                .HasAnnotation("Relational:JsonPropertyName", "harmless");
+
+                            b1.Property<int>("Malicious")
+                                .HasColumnType("int")
+                                .HasAnnotation("Relational:JsonPropertyName", "malicious");
+
+                            b1.Property<int>("Suspicious")
+                                .HasColumnType("int")
+                                .HasAnnotation("Relational:JsonPropertyName", "suspicious");
+
+                            b1.Property<int>("Timeout")
+                                .HasColumnType("int")
+                                .HasAnnotation("Relational:JsonPropertyName", "timeout");
+
+                            b1.Property<int>("Undetected")
+                                .HasColumnType("int")
+                                .HasAnnotation("Relational:JsonPropertyName", "undetected");
+
+                            b1.HasKey("DbDataId");
+
+                            b1.ToTable("Links");
+
+                            b1.WithOwner()
+                                .HasForeignKey("DbDataId");
+                        });
+
+                    b.Navigation("EasyDmarcResponse");
+
+                    b.Navigation("VirusTotalResult");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -249,7 +342,7 @@ namespace TumoLubCybersecurity.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("LearningASPweb.Data.TumoLubProjectUserModel", null)
+                    b.HasOne("LearningASPweb.Data.APIUserModel", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -258,7 +351,7 @@ namespace TumoLubCybersecurity.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("LearningASPweb.Data.TumoLubProjectUserModel", null)
+                    b.HasOne("LearningASPweb.Data.APIUserModel", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -273,7 +366,7 @@ namespace TumoLubCybersecurity.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LearningASPweb.Data.TumoLubProjectUserModel", null)
+                    b.HasOne("LearningASPweb.Data.APIUserModel", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -282,7 +375,7 @@ namespace TumoLubCybersecurity.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("LearningASPweb.Data.TumoLubProjectUserModel", null)
+                    b.HasOne("LearningASPweb.Data.APIUserModel", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

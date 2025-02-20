@@ -11,10 +11,12 @@ const updateLinks = (onLinkHovered) => {
 };
 
 async function onEnter(e, onLinkHovered) {
+    if (popupInfo.isInProcess)
+        return;
     const element = e.target;
     const link = element.getAttribute('href-back');
 
-    changeCursor(element, 'wait');
+    changeCursor(element, 'progress');
 
     let model = { score: 0, dangerType: 'none' };
 
@@ -24,6 +26,7 @@ async function onEnter(e, onLinkHovered) {
     const y = rect.top + window.scrollY + rect.height;
 
     try {
+        popupInfo.isInProcess = true;
         addTooltip('Checking safety of this link...', x, y);
         model = { ...model, ...await onLinkHovered(link) };
     } finally {
@@ -31,7 +34,7 @@ async function onEnter(e, onLinkHovered) {
         changeCursor(element, '');
     }
 
-    if (model.score == 0) {
+    if (model.score === 0) {
         unblockLink(element);
         return;
     }
@@ -49,6 +52,7 @@ async function onEnter(e, onLinkHovered) {
     wrapper.style.top = y + 'px';
 
     a(wrapper, createPopupContent(model.dangerType, model.score, link));
+    popupInfo.isInProcess = false;
 }
 
 function onLeave() {
@@ -62,7 +66,6 @@ function addTooltip(text, x, y) {
     const tooltip = document.getElementsByClassName('labrats-tooltip')[0];
     tooltip.textContent = text;
     tooltip.style.display = 'block';
-    console.log(x, y);
     tooltip.style.left = x + 'px';
     tooltip.style.top = y + 'px';
 }

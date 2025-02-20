@@ -9,9 +9,9 @@ namespace AntiPhishingAPI.Data.Models
     {
         public int Id { get; set; }
         public string Url { get; set; }
-        public double Dangerousity { get; set; }   
-        public bool IsLinkActive { get; set; }
-        public bool IsLinkInPhishingBlackList { get; set; }
+        public double Dangerousity { get; set; }
+        public bool IsLinkActive { get; set; } = true;
+        public bool IsLinkInPhishingBlackList { get; set; } 
         public VirusTotalResultDTO VirusTotalResult { get; set; }
         public EasyDmarcResponseDto EasyDmarcResponse { get; set; } 
     }

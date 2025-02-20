@@ -19,8 +19,9 @@ namespace AntiPhishingAPI.Controllers
         private readonly ILinksService _linksService;
         private readonly IMapper _mapper;
         private readonly IEasyDmarc _dmarc;
-        public PhishingDetectorController(ICheckStatus checkStatus , IPhishingChecker checker, IVirusTotalService virusTotalService,ILinksService linksService, IEasyDmarc dmarc)
+        public PhishingDetectorController(ICheckStatus checkStatus , IMapper mapper , IPhishingChecker checker, IVirusTotalService virusTotalService,ILinksService linksService, IEasyDmarc dmarc)
         {
+            _mapper = mapper;
             _checkStatus = checkStatus;
             _blackListChecker = checker;
             _virusTotalService = virusTotalService;
@@ -36,30 +37,27 @@ namespace AntiPhishingAPI.Controllers
         }
         //[Authorize]
         [HttpPost]
-        public async Task<int>CheckLink([FromBody]string link)
+        public async Task<int>CheckLink([FromBody]LinkDto link)
         {
-            if (String.IsNullOrEmpty(link))
-            {
+            if (String.IsNullOrEmpty(link.Url))
+            { 
                 //can return another thing
                 throw new Exception("incorrect data");
             }
-            CheckingLink CheckLink=_mapper.Map<CheckingLink>(link);
-            DbData dbInstance = await _linksService.GetLinkDataByURLAsync(CheckLink.Link);
-            var status = await _checkStatus.GetStatus(CheckLink.Link);
+            var checkLink=_mapper.Map<CheckingLink>(link);
+            DbData dbInstance = new DbData() { Url = link.Url };
+            var status = await _checkStatus.GetStatus(checkLink.Link);
             //what if the 300 redirection comes??????
             if (status != HttpStatusCode.OK)
             {
-                dbInstance.IsLinkActive=false;
-                dbInstance.Dangerousity = 1;
-                await _linksService.AddLinkDataInDb(dbInstance);
-                //the Front side prompts that the link does not exist in case of negative value
-                return int.MinValue;
+                dbInstance.IsLinkActive = false;
+                dbInstance.Dangerousity = 0;
+                return await _linksService.AddLinkDataInDb(dbInstance);
             }
-            CheckLink=await _blackListChecker.CheckLinkPresenceInPhishingDbAsync(CheckLink,dbInstance);
-            CheckLink = await _virusTotalService.CheckLinkInVirusTotalAsync(CheckLink, dbInstance);
-            CheckLink=await _dmarc.CheckLinkByEasyDmarcAsync(CheckLink,dbInstance);
-            int result = await _linksService.AddLinkDataInDb(dbInstance);
-            return result;
+            checkLink=await _blackListChecker.CheckLinkPresenceInPhishingDbAsync(checkLink,dbInstance);
+            checkLink = await _virusTotalService.CheckLinkInVirusTotalAsync(checkLink, dbInstance);
+            await _dmarc.CheckLinkByEasyDmarcAsync(checkLink,dbInstance);
+            return await _linksService.AddLinkDataInDb(dbInstance);
         }
     }
 }

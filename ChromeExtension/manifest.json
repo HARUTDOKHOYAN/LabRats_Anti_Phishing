@@ -10,6 +10,7 @@
                 "styles/progressCircleStyle.css"
             ],
             "js": [
+                "scripts/requestControl.js",
                 "scripts/globalVars.js",
                 "scripts/urlScraping.js",
                 "scripts/view/setupPopup.js",
