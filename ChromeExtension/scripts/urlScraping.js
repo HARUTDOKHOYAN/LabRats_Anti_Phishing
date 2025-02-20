@@ -35,6 +35,7 @@ async function onEnter(e, onLinkHovered) {
         removeTooltip();
         changeCursor(element, '');
         popupInfo.isInProcess = false;
+        unblockLink(element);
     }
 
     if (model.score === 0) {
