@@ -44,7 +44,7 @@ namespace AntiPhishingAPI.Controllers
                 //can return another thing
                 throw new Exception("incorrect data");
             }
-            var checkLink=_mapper.Map<CheckingLink>(link);
+            var checkLink=_mapper.Map<CheckingLink>(link.Url);
             DbData dbInstance = await _linksService.GetLinkDataByURLAsync(link.Url);
             if(dbInstance != null)
             {

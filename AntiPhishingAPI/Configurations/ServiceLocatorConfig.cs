@@ -31,7 +31,7 @@ public static class ServiceLocatorConfig
             .AddEntityFrameworkStores<AnitPhoshingDbContext>()
             .AddDefaultTokenProviders();
         services.AddScoped<IAuthManager, AuthManager>();
-        services.AddScoped<IPhishingChecker, PhishingChecker>();
+        services.AddSingleton<IPhishingChecker, PhishingChecker>();
         services.AddScoped<IEasyDmarc, EasyDmarcService>();
         services.AddScoped<ICheckStatus, CheckStatusService>();
         services.AddHttpClient();

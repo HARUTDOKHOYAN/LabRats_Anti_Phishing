@@ -10,18 +10,23 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
     {
         private readonly IConfiguration _configuration;
         private readonly IWebHostEnvironment _env;
-
+        private  HashSet<string> _blackList;
         public PhishingChecker(IConfiguration configuration , IWebHostEnvironment env)
         {
             _configuration = configuration;
             _env = env;
         }
 
+        public async Task LoadPhishingLinks()
+        {
+            if(_blackList != null) return;
+            string blackListPath = Path.Combine(_env.ContentRootPath, "PhishingLinks/phishing-links-ACTIVE.txt");
+            _blackList =  (HashSet<string>)await Converter.FileToSetConverter(blackListPath);
+        }
         public async Task<CheckingLink> CheckLinkPresenceInPhishingDbAsync(CheckingLink phishingLink,DbData dbInstance)
         {
-            string blackListPath = Path.Combine(_env.ContentRootPath, "PhishingLinks/phishing-links-ACTIVE.txt");
-            HashSet<string> blacklist = (HashSet<string>)await Converter.FileToSetConverter(blackListPath);
-            if (blacklist.Contains(phishingLink.Link)) 
+            await LoadPhishingLinks();
+            if (_blackList.Contains(phishingLink.Link)) 
             {
                 phishingLink.Dangerousity += 1;
                 if (dbInstance != null)
@@ -29,7 +34,7 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
                     dbInstance.IsLinkInPhishingBlackList = true;
                 }
             }
-             return phishingLink;
+            return phishingLink;
         }
     }
 }
