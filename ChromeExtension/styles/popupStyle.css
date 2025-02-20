@@ -10,7 +10,7 @@
     z-index: 99999;
     position: absolute;
     display: flex;
-    max-width: 500px;
+    max-width: 460px;
     min-width: 300px;
     flex-direction: column;
     justify-content: space-between;
@@ -37,14 +37,39 @@
 }
 
 .labrats-popup .top-div .right-div .lab-rats-h2 {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .labrats-popup .top-div .right-div .lab-rats-p {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 8px;
     color: #848484;
 }
 
-.labrats-popup .bottom-div {
+.labrats-popup .bottom-div p {
+    font-size: 14px;
+}
+
+.labrats-popup .top-div .right-div .link-wrapper {
+    align-self: flex-start;
+    margin-top: 16px;
+}
+
+.labrats-popup .top-div .right-div a {
+    font-size: 14px;
+    display: block;
+    transition: opacity 0.3s ease;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    border: 0;
+    border-radius: 4px;
+}
+
+.labrats-popup .top-div .right-div a:hover {
+    opacity: 0.8;
+}
+
+.labrats-popup .top-div .right-div a:visited {
+    color: white !important;
 }

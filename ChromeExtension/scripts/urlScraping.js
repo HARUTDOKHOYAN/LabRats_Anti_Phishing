@@ -1,5 +1,5 @@
 const updateLinks = (onLinkHovered) => {
-    [...document.querySelectorAll("a")].filter(isUrlExternal).forEach(element => {
+    [...document.querySelectorAll("a")].filter(isExternalUrl).forEach(element => {
         blockLink(element);
 
         element.addEventListener("focus", e => onEnter(e, onLinkHovered));
@@ -12,12 +12,13 @@ const updateLinks = (onLinkHovered) => {
 
 async function onEnter(e, onLinkHovered) {
     const element = e.target;
+    const link = element.getAttribute('href-back');
 
     changeCursor(element, 'wait');
 
     let model = { score: 0, dangerType: 'none' };
     try {
-        model = { ...model, ...await onLinkHovered(element.href) };
+        model = { ...model, ...await onLinkHovered(link) };
     } finally {
         changeCursor(element, '');
     }
@@ -26,6 +27,8 @@ async function onEnter(e, onLinkHovered) {
         unblockLink(element);
         return;
     }
+
+    element.style['border-bottom'] = `solid 2px ${getColors(model.dangerType).main}`;
 
     if (popupInfo.timeout)
         clearTimeout(popupInfo.timeout);
@@ -38,11 +41,11 @@ async function onEnter(e, onLinkHovered) {
     const rect = element.getBoundingClientRect();
     let x = rect.left + window.scrollX;
     x = x + 400 > window.innerWidth ? x - (400 - (window.innerWidth - x)) : x;
-    const y = rect.top + window.scrollY + 40;
+    const y = rect.top + window.scrollY + rect.height;
     wrapper.style.left = `${x}px`;
     wrapper.style.top = `${y}px`;
 
-    a(wrapper, createPopupContent(model.dangerType, model.score));
+    a(wrapper, createPopupContent(model.dangerType, model.score, link));
 }
 
 function onLeave() {
@@ -65,20 +68,10 @@ function getPopupWrapper() {
     return document.getElementsByClassName('lab-rats-popup-wrapper')[0];
 }
 
-function isUrlExternal(element) {
-    let url = element.href;
-    const domainName = window.location.hostname.split('.')[1];
-
-    if (url.includes("://")) {
-        url = url.substring(url.indexOf("://") + 3);
-    }
-
-    const slashIndex = url.search(/[\/?#]/);
-    if (slashIndex !== -1) {
-        url = url.substring(0, slashIndex);
-    }
-    return !url.includes(domainName);
-}
+const isExternalUrl = (a) =>
+    a.href.startsWith('http')&&
+    URL.canParse(a.href) &&
+    new URL(a.href).origin !== location.origin;
 
 function changeCursor(element, cursor) {
     element.style.cursor = cursor;

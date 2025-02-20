@@ -1,50 +1,58 @@
-function createPopupContent(level, score) {
-    let colors = getColors(level);
+function createPopupContent(level, score, link) {
+    const colors = getColors(level);
 
-    let popup = el('div', 'labrats-popup');
+    const popup = el('div', 'labrats-popup');
 
-    a(popup, getTopDiv(level, colors, score));
+    a(popup, getTopDiv(level, colors, score, link));
     a(popup, getBottomDiv(level, colors));
     return popup;
 }
 
-function getTopDiv(level, colors, score) {
-    let topDiv = el('div', 'top-div');
+function getTopDiv(level, colors, score, link) {
+    const topDiv = el('div', 'top-div');
     a(topDiv, getProgressRing(colors, score));
 
-    let rightDiv = el('div', 'right-div');
+    const rightDiv = el('div', 'right-div');
     a(topDiv, rightDiv);
 
-    let title = el('h2', 'lab-rats-h2');
+    const title = el('h2', 'lab-rats-h2');
     title.style.color = colors.main;
     a(title, document.createTextNode(level == 'danger' ? 'High Risk Detected' : 'Potential Risk'));
-    let descr = el('p', 'lab-rats-p');
-    a(descr, document.createTextNode(level == 'danger' ? 'This link is dangerous and may contain security threats' : 'This link may be unsafe, proceed with caution'));
-
     a(rightDiv, title);
+
+    const descr = el('p', 'lab-rats-p');
+    a(descr, document.createTextNode(level == 'danger' ? 'This link is dangerous and may contain security threats' : 'This link may be unsafe, proceed with caution'));
     a(rightDiv, descr);
+
+    if (level == 'warning') {
+        const linkElement = el('a');
+        linkElement.style.background = colors.main;
+        linkElement.href = link;
+        a(linkElement, document.createTextNode('Continue anyway'));
+        const linkWrapper = el('div', 'link-wrapper');
+        a(linkWrapper, linkElement);
+        a(rightDiv, linkWrapper);
+    }
 
     return topDiv;
 }
 
 function getBottomDiv(level, colors) {
-    let bottomDiv = el('div', 'bottom-div');
+    const bottomDiv = el('div', 'bottom-div');
 
     if (level == 'danger') {
-        let text = el('p');
+        const text = el('p');
         text.style.color = colors.main;
         a(text, document.createTextNode('For your safety, access is blocked.'));
 
         a(bottomDiv, text);
-    } else {
-        
     }
 
     return bottomDiv;
 }
 
 function getProgressRing(colors, score) {
-    let circle = el('div', 'progress-circle');
+    const circle = el('div', 'progress-circle');
 
     drawProgressCircle(circle, 100, colors.secondary, 100, 10, false);
     drawProgressCircle(circle, score, colors.main, 100, 10, true);
@@ -56,7 +64,7 @@ const a = (parent, el) => {
 }
 
 const el = (el, className) => {
-    let element = document.createElement(el);
+    const element = document.createElement(el);
     if (className)
         element.className = className;
     return element;
