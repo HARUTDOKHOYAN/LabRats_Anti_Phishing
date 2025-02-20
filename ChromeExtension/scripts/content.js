@@ -4,12 +4,26 @@ setupPopup();
 
 let iii = 0;
 
-async function onLinkHovered(link) {
-    await new Promise(resolve => setTimeout(resolve, 500));
-    iii++;
+async  function GetLinkDangerousResult(link){
+    let id = localStorage.getItem(link);
+    if(!id){
+        id = await ScanURLRequest(link);
+        console.log(id);
+        localStorage.setItem(link, id);
+    }
+        return  await GetScanResult(id);
+}
 
-    if (iii % 2 == 1)
-        return { score: 80, dangerType: 'danger' };
-    else
-        return { score: 40, dangerType: 'warning' };
+async function onLinkHovered(link)
+{
+    let result = await GetScanResult(link);
+    console.log(result);
+
+    if(!result["isLinkActive"])
+        return  { score: 0};
+
+    let score = result["dangerousity"] * 100;
+    let dangerType = score > 60 ? "danger" : "success";
+
+    return { score: score, dangerType: dangerType };
 }
