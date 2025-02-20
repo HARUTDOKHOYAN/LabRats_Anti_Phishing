@@ -1,8 +1,14 @@
 {
-    "name": "labRats",
-    "description": "Anti Phishing",
+    "name": "PhiShield",
+    "description": "Anti Phishing extension for you and your loved ones",
     "version": "1.0",
     "manifest_version": 3,
+    "icons": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    },
     "content_scripts": [
         {
             "css": [
