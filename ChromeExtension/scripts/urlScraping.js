@@ -22,7 +22,7 @@ async function onEnter(e, onLinkHovered) {
         changeCursor(element, '');
     }
 
-    if (model.score == 0) {
+    if (model.score === 0) {
         unblockLink(element);
         return;
     }
