@@ -59,27 +59,25 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
             return id;
         }
 
-        private  async Task<double> VirusTotalChecksResultAsync(VirusTotalResultDTO dto)
+        private async Task<double> VirusTotalChecksResultAsync(VirusTotalResultDTO dto)
         {
             //I mean this logic
-            return dto.Harmless-(dto.Suspicious+dto.Malicious+dto.Undetected);
+            return dto.Harmless - (dto.Suspicious + dto.Malicious + dto.Undetected);
         }
 
-        public async Task<CheckingLink> CheckLinkInVirusTotalAsync(CheckingLink link, DbData dbInstance)
+        public async Task<DbData> CheckLinkInVirusTotalAsync(CheckingLink link)
         {
             string checkingLinkId = await SendLinkToVirusTotalToCheckAsync(link.Link);
-            string virusTotalServiceResponse= await CheckLinkByIdFromVirusTotalAsync(checkingLinkId);
+            string virusTotalServiceResponse = await CheckLinkByIdFromVirusTotalAsync(checkingLinkId);
             VirusTotalResultDTO virusTotalResultDTO = await Converter.JsonToVirusTotalObjectConverter(virusTotalServiceResponse);
+            DbData dbInstance = new DbData();
             //the logic is so simple can be improved further
-            if (await VirusTotalChecksResultAsync(virusTotalResultDTO)<0)
+            if (await VirusTotalChecksResultAsync(virusTotalResultDTO) < 0)
             {
-                link.Dangerousity += 0.25;
-                if (dbInstance != null)
-                {
-                    dbInstance.VirusTotalResult = virusTotalResultDTO;
-                }
+                dbInstance.Dangerousity += 0.25;
+                dbInstance.VirusTotalResult = virusTotalResultDTO;
             }
-            return link;
+            return dbInstance;
         }
 
     }

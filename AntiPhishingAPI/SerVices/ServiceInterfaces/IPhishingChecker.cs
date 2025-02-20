@@ -5,6 +5,6 @@ namespace AntiPhishingAPI.SerVices.ServiceInterfaces
 {
     public interface IPhishingChecker
     {
-        public Task<CheckingLink> CheckLinkPresenceInPhishingDbAsync(CheckingLink phishingLink, DbData instanceForDB);
+        public Task<DbData> CheckLinkPresenceInPhishingDbAsync(CheckingLink phishingLink);
     }
 }
