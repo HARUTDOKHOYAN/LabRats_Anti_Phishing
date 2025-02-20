@@ -50,6 +50,7 @@ namespace AntiPhishingAPI.Controllers
             {
                 return dbInstance.Id;
             }
+            dbInstance=new DbData() { Url = link.Url };
             var status = await _checkStatus.GetStatus(checkLink.Link);
             //what if the 300 redirection comes??????
             if (status != HttpStatusCode.OK)
@@ -58,9 +59,21 @@ namespace AntiPhishingAPI.Controllers
                 dbInstance.Dangerousity = 0;
                 return await _linksService.AddLinkDataInDb(dbInstance);
             }
-            checkLink=await _blackListChecker.CheckLinkPresenceInPhishingDbAsync(checkLink,dbInstance);
+            
+            var blackListCheckTask = _blackListChecker.CheckLinkPresenceInPhishingDbAsync(checkLink);
+            var virusTotalCheckTask = _virusTotalService.CheckLinkInVirusTotalAsync(checkLink);
+            var dmarcCheckTask = _dmarc.CheckLinkByEasyDmarcAsync(checkLink);
+
+            await Task.WhenAll(blackListCheckTask, virusTotalCheckTask, dmarcCheckTask);
+
+            dbInstance.Dangerousity=(blackListCheckTask.Result.Dangerousity+ virusTotalCheckTask.Result.Dangerousity+ dmarcCheckTask.Result.Dangerousity);
+            dbInstance.IsLinkInPhishingBlackList = blackListCheckTask.Result.IsLinkInPhishingBlackList;
+            dbInstance.VirusTotalResult=virusTotalCheckTask.Result.VirusTotalResult;
+            dbInstance.EasyDmarcResponse= dmarcCheckTask.Result.EasyDmarcResponse;
+
+            /*checkLink=await _blackListChecker.CheckLinkPresenceInPhishingDbAsync(checkLink,dbInstance);
             checkLink = await _virusTotalService.CheckLinkInVirusTotalAsync(checkLink, dbInstance);
-            await _dmarc.CheckLinkByEasyDmarcAsync(checkLink,dbInstance);
+            await _dmarc.CheckLinkByEasyDmarcAsync(checkLink,dbInstance);*/
             return await _linksService.AddLinkDataInDb(dbInstance);
         }
     }

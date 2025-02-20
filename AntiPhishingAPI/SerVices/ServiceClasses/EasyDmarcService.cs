@@ -48,8 +48,9 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
             }
         }
 
-        public async Task<CheckingLink> CheckLinkByEasyDmarcAsync(CheckingLink link, DbData dbInstance)
+        public async Task<DbData> CheckLinkByEasyDmarcAsync(CheckingLink link)
         {
+            DbData dbInstance = new DbData();
             try
             {
                 EasyDmarcCredentials credentials = await GetCredentialsForEasyDmarcRequest(_configuration["EasyDmark:client_id"], _configuration["EasyDmark:client_secret"], _configuration["EasyDmark:grant_type"]);
@@ -67,15 +68,11 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
                 if (response.IsSuccessStatusCode)
                 {
                     var responseJson = await response.Content.ReadAsStringAsync();
-                    EasyDmarcResponseDto linkData=JsonConvert.DeserializeObject<EasyDmarcResponseDto>(responseJson);
+                    EasyDmarcResponseDto linkData = JsonConvert.DeserializeObject<EasyDmarcResponseDto>(responseJson);
                     if (linkData.Result)
                     {
-                        link.Dangerousity += 0.25;
-                        if(dbInstance != null)
-                        {
-                            dbInstance.EasyDmarcResponse= linkData;
-                            dbInstance.Dangerousity=link.Dangerousity;
-                        }
+                        dbInstance.Dangerousity += 0.25;
+                        dbInstance.EasyDmarcResponse = linkData;
                     }
                 }
                 else
@@ -83,11 +80,11 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
                     throw new Exception();
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                
+
             }
-            return link;
+            return dbInstance;
         }
     }
 }

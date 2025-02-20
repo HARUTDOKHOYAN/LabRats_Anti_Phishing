@@ -5,6 +5,6 @@ namespace AntiPhishingAPI.SerVices.ServiceInterfaces
 {
     public interface IVirusTotalService
     {
-        public Task<CheckingLink> CheckLinkInVirusTotalAsync(CheckingLink link, DbData instanceForDb);
+        public Task<DbData> CheckLinkInVirusTotalAsync(CheckingLink link);
     }
 }

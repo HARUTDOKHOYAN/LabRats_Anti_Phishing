@@ -5,6 +5,6 @@ namespace AntiPhishingAPI.SerVices.ServiceInterfaces
 {
     public interface IEasyDmarc
     {
-        public Task<CheckingLink> CheckLinkByEasyDmarcAsync(CheckingLink link, DbData instanceForDb);
+        public Task<DbData> CheckLinkByEasyDmarcAsync(CheckingLink link);
     }
 }
