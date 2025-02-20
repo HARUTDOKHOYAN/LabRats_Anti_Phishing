@@ -17,9 +17,17 @@ async function onEnter(e, onLinkHovered) {
     changeCursor(element, 'wait');
 
     let model = { score: 0, dangerType: 'none' };
+
+    const rect = element.getBoundingClientRect();
+    let x = rect.left + window.scrollX;
+    x = x + 400 > window.innerWidth ? x - (400 - (window.innerWidth - x)) : x;
+    const y = rect.top + window.scrollY + rect.height;
+
     try {
+        addTooltip('Checking safety of this link...', x, y);
         model = { ...model, ...await onLinkHovered(link) };
     } finally {
+        removeTooltip();
         changeCursor(element, '');
     }
 
@@ -37,13 +45,8 @@ async function onEnter(e, onLinkHovered) {
     wrapper.replaceChildren();
 
     wrapper.style.display = 'block';
-
-    const rect = element.getBoundingClientRect();
-    let x = rect.left + window.scrollX;
-    x = x + 400 > window.innerWidth ? x - (400 - (window.innerWidth - x)) : x;
-    const y = rect.top + window.scrollY + rect.height;
-    wrapper.style.left = `${x}px`;
-    wrapper.style.top = `${y}px`;
+    wrapper.style.left = x + 'px';
+    wrapper.style.top = y + 'px';
 
     a(wrapper, createPopupContent(model.dangerType, model.score, link));
 }
@@ -53,6 +56,21 @@ function onLeave() {
     popupInfo.timeout = setTimeout(() => {
         wrapper.style.display = 'none';
     }, popupInfo.closeTimeMs);
+}
+
+function addTooltip(text, x, y) {
+    const tooltip = document.getElementsByClassName('labrats-tooltip')[0];
+    tooltip.textContent = text;
+    tooltip.style.display = 'block';
+    console.log(x, y);
+    tooltip.style.left = x + 'px';
+    tooltip.style.top = y + 'px';
+}
+
+function removeTooltip() {
+    const tooltip = document.getElementsByClassName('labrats-tooltip')[0];
+    tooltip.textContent = '';
+    tooltip.style.display = 'none';
 }
 
 function blockLink(element) {
@@ -69,7 +87,7 @@ function getPopupWrapper() {
 }
 
 const isExternalUrl = (a) =>
-    a.href.startsWith('http')&&
+    a.href.startsWith('http') &&
     URL.canParse(a.href) &&
     new URL(a.href).origin !== location.origin;
 

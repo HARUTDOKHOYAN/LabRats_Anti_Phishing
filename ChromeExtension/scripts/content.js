@@ -5,7 +5,7 @@ setupPopup();
 let iii = 0;
 
 async function onLinkHovered(link) {
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 1500));
     iii++;
 
     if (iii % 2 == 1)
