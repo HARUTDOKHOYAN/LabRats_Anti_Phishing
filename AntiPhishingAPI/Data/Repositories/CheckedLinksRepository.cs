@@ -3,6 +3,7 @@ using AntiPhishingAPI.Data.Repositories.Contracts;
 using AutoMapper;
 using LearningASPweb.Data;
 using LearningASPweb.Data.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace AntiPhishingAPI.Data.Repositories
 {
@@ -19,6 +20,17 @@ namespace AntiPhishingAPI.Data.Repositories
             await Context.SaveChangesAsync();
             return link.Id;
         }
-    
+
+        public async Task<DbData> GetByUrlAsync(string url)
+        {
+            if (string.IsNullOrEmpty(url))
+            {
+                return null;
+            }
+            else
+            {
+               return await Context.Links.FirstOrDefaultAsync(l=>l.Url.Equals(url));
+            }
+        }
     }
 }

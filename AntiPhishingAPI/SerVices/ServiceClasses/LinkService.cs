@@ -24,5 +24,9 @@ namespace AntiPhishingAPI.SerVices.ServiceClasses
             DbData result= await _repository.ReadAsync(id);
             return result;
         }
+        public async Task<DbData> GetLinkDataByURLAsync(string url)
+        {
+            return await _repository.GetByUrlAsync(url);
+        }
     }
 }

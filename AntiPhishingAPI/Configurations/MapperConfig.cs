@@ -11,7 +11,7 @@ public class MapperConfig: Profile
     {
         CreateMap<APIUserModel, ApiUserDto>().ReverseMap();
         CreateMap<string, CheckingLink>()
-            .ForMember(dest => dest.Link, opt => opt.MapFrom(src => src))
+            .ForMember(dest => dest.Link, opt => opt.MapFrom(src => src.ToLower()))
             .ForMember(dest => dest.Dangerousity, opt => opt.Ignore());
     }
 }

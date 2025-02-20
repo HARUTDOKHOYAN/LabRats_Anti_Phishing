@@ -7,5 +7,6 @@ namespace AntiPhishingAPI.SerVices.ServiceInterfaces
     {
         Task<int> AddLinkDataInDb(DbData link);
         Task<DbData>GetCheckingLinkById(int id);
+        Task<DbData> GetLinkDataByURLAsync(string url);
     }
 }
