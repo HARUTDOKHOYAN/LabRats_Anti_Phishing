@@ -16,7 +16,7 @@ async function onEnter(e, onLinkHovered) {
     const element = e.target;
     const link = element.getAttribute('href-back');
 
-    changeCursor(element, 'wait');
+    changeCursor(element, 'progress');
 
     let model = { score: 0, dangerType: 'none' };
 
