@@ -32,6 +32,7 @@ public static class ServiceLocatorConfig
             .AddDefaultTokenProviders();
         services.AddScoped<IAuthManager, AuthManager>();
         services.AddScoped<IPhishingChecker, PhishingChecker>();
+        services.AddScoped<IEasyDmarc, EasyDmarcService>();
         services.AddScoped<ICheckStatus, CheckStatusService>();
         services.AddHttpClient();
         services.AddScoped<ICheckedLinkRepository, CheckedLinksRepository>();

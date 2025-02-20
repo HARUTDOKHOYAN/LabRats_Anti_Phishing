@@ -17,6 +17,16 @@ internal class Program
         });
         builder.Host.UseSerilog((ctx,lc) => lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowChromeExtension",
+                policy =>
+                {
+                    policy.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+        });
         ServiceLocatorConfig.ConfigureAppServices(builder);
         
         
@@ -31,6 +41,7 @@ internal class Program
         app.UseHttpsRedirection();
 
         app.UseMiddleware<ExeptionMiddleware>();
+        app.UseCors("AllowChromeExtension");
         app.UseAuthentication();
         app.UseAuthorization();
         app.MapControllers();
