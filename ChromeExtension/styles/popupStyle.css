@@ -1,5 +1,5 @@
 .labrats-popup h2,
-.labrats-popup p ,
+.labrats-popup p,
 .labrats-tooltip {
     margin: 0;
     padding: 0;
@@ -51,12 +51,13 @@
     font-size: 14px;
 }
 
-.labrats-popup .top-div .right-div .link-wrapper {
+.labrats-popup .top-div .right-div .warning-link-wrapper,
+.labrats-popup .top-div .right-div .danger-link-wrapper {
     align-self: flex-start;
     margin-top: 16px;
 }
 
-.labrats-popup .top-div .right-div a {
+.labrats-popup .top-div .right-div .warning-link-wrapper a {
     font-size: 14px;
     display: block;
     transition: opacity 0.3s ease;
@@ -67,11 +68,19 @@
     border-radius: 4px;
 }
 
+.labrats-popup .top-div .right-div .danger-link-wrapper a{
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+    text-decoration: underline;
+    border: 0;
+    border-radius: 4px;
+}
+
 .labrats-popup .top-div .right-div a:hover {
     opacity: 0.8;
 }
 
-.labrats-popup .top-div .right-div a:visited {
+.labrats-popup .top-div .right-div .warning-link-wrapper a:visited {
     color: white !important;
 }
 

@@ -11,8 +11,8 @@ const updateLinks = (onLinkHovered) => {
 };
 
 async function onEnter(e, onLinkHovered) {
-    if (popupInfo.isInProcess)
-        return;
+    // if (popupInfo.isInProcess)
+    //     return;
     const element = e.target;
     const link = element.getAttribute('href-back');
 

@@ -24,15 +24,17 @@ function getTopDiv(level, colors, score, link) {
     a(descr, document.createTextNode(level == 'danger' ? 'This link is dangerous and may contain security threats' : 'This link may be unsafe, proceed with caution'));
     a(rightDiv, descr);
 
+    const linkElement = el('a');
     if (level == 'warning') {
-        const linkElement = el('a');
         linkElement.style.background = colors.main;
-        linkElement.href = link;
-        a(linkElement, document.createTextNode('Continue anyway'));
-        const linkWrapper = el('div', 'link-wrapper');
-        a(linkWrapper, linkElement);
-        a(rightDiv, linkWrapper);
+    } else {
+        linkElement.style.color = colors.main;
     }
+    linkElement.href = link;
+    a(linkElement, document.createTextNode('Continue anyway'));
+    const linkWrapper = el('div', level == 'warning' ? 'warning-link-wrapper' : 'danger-link-wrapper');
+    a(linkWrapper, linkElement);
+    a(rightDiv, linkWrapper);
 
     return topDiv;
 }
