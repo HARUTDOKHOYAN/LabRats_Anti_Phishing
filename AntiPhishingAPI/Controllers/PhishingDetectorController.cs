@@ -45,7 +45,11 @@ namespace AntiPhishingAPI.Controllers
                 throw new Exception("incorrect data");
             }
             var checkLink=_mapper.Map<CheckingLink>(link);
-            DbData dbInstance = new DbData() { Url = link.Url };
+            DbData dbInstance = await _linksService.GetLinkDataByURLAsync(link.Url);
+            if(dbInstance != null)
+            {
+                return dbInstance.Id;
+            }
             var status = await _checkStatus.GetStatus(checkLink.Link);
             //what if the 300 redirection comes??????
             if (status != HttpStatusCode.OK)
