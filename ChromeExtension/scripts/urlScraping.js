@@ -28,10 +28,13 @@ async function onEnter(e, onLinkHovered) {
     try {
         popupInfo.isInProcess = true;
         addTooltip('Checking safety of this link...', x, y);
-        model = { ...model, ...await onLinkHovered(link) };
+        let res = await onLinkHovered(link);
+        if (res != null)
+            model = { ...model, ...res };
     } finally {
         removeTooltip();
         changeCursor(element, '');
+        popupInfo.isInProcess = false;
     }
 
     if (model.score === 0) {
@@ -52,7 +55,6 @@ async function onEnter(e, onLinkHovered) {
     wrapper.style.top = y + 'px';
 
     a(wrapper, createPopupContent(model.dangerType, model.score, link));
-    popupInfo.isInProcess = false;
 }
 
 function onLeave() {
