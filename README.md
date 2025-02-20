@@ -1,5 +1,4 @@
-# LabRats_Anti_Phishing
-Phishield – Real-Time Phishing Protection (Browser Extension)
+# Phishield – Real-Time Phishing Protection (Browser Extension)
 
 As part of the Lab Rats team at TUMO Labs, we developed PhiShield, a browser extension designed to protect users—especially vulnerable populations like children and the elderly—from phishing attacks.
 
